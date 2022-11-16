@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이미지와링크태그</title>
+</head>
+
+<body>
+  <h5><a href="index.html">처음으로</a></h5>
+  <!-- h1태그는 한개밖에 사용할 수 없다 -->
+  <h1>이미지와 링크 태그</h1>
+  <hr>
+  <h2>이미지 태그</h2>
+  <p>
+    웹문서에 이미지를 불러오는 요소<br>
+    인라인 태그로 줄바꿈이 되지 않음<br>
+    닫힘 태그 요소 없음<br>
+    이미지 태그와 함께 사용하는 필수 속성 태그가 존재함
+  </p>
+  <p>
+    이미지 태그 속성들
+  </p>
+  <ul>
+    <li>src="이미지 경로 지정"</li>
+    <li>width="가로 크기 지정(px단위 자동 설정)"</li>
+    <li>height="세로 크기 지정(px단위 자동 설정)"</li>
+    <li>alt="대체 텍스트 속성"</li>
+  </ul>
+  <p>
+    alt 속성은 웹 접근성을 사용할 때 필수 작성 요소<br>
+  </p>
+  <h3>예제</h3>
+  <em>
+    불특정한 사진을 공간을 채우기위해 사용하는 사이트<br>
+    https://picsum.photos/200/300 - 가로200*세로300 사이즈의 사진 등록<br>
+    https://picsum.photos/ 뒤에 아무것도 없으면 크기를 몰라 사진을 안 보낸다
+  </em><br>
+  <!-- em도 인라인코드고 img도 인라인코드여서 br을 안 쓰면 옆에 쓰임 -->
+  <img src="https://picsum.photos/200/300" alt="가로200에 세로300의 무작위 그림"><br>
+  <img src="https://picsum.photos/300/200" alt="가로300에 세로200의 무작위 그림"><br>
+  <img
+    src="https://w.namu.la/s/96f05e961ab1169f6f0ef41902388df4832baabd91f44e79ad4b83a2eb53439831f02378ce10fe4073f627f25ac31fcfe3de93161fc5d171902c77b9159aa9173c74a5dddf2280657228f3f3a1882504927584731821a27ad2d2f7769d9bd058a2d5c39d03ca049124a65d82e2012d23"
+    alt="빨간 사과 2개와 반개"><br>
+  <!-- 컴퓨터 내에 있는 사진 업로드 -->
+  <img src="img\최소라_인포메이션아키텍쳐_v001.jpg" alt="" width="300" height="auto">
+
+  <h2>링크태그</h2>
+  <p>
+    웹 문서에서 다른 페이지나 웹 페이지 내부의 특정 위치로 이동할 때 사용하는 anchor(앵커) 태그 -a태그<br>
+    닫힘 태그와 함께 사용하고 줄바꿈이 없는 인라인 속성이다.
+  </p>
+  <p>
+    앵커 태그 속성
+  </p>
+  <ul>
+    <li>href="위치 경로 주소 작성"</li>
+    <li>target="_blank" (새창열기)</li>
+  </ul>
+  
+  <h3>예제</h3>
+  <ul>
+    <li><a href="http://www.naver.com">네이버 바로가기</a></li>
+    <li><a href="http://www.naver.com" target="_blank">네이버 새창열기</a></li>
+  </ul>
+  
+</body>
+
+</html>
