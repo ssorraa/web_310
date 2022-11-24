@@ -58,6 +58,26 @@
 
 
     </tr>
+    <tr>
+      <td>중복선택자</td>
+      <td>,</td>
+      <td>여러개의 선택자를 나열해서 사용할 수 있다.</td>
+    </tr>
+    <tr>
+      <td>중복선택자</td>
+      <td>붙여쓰기(태그.클래스명)</td>
+      <td>지정된 태그중 해당 클래스명만 부름</td>
+    </tr>
+    <tr>
+      <td>후손선택자</td>
+      <td>선택자 선택자</td>
+      <td>부모자 내부에 있는 요소를 모두 부른다.</td>
+    </tr>
+    <tr>
+      <td>자손선택자</td>
+      <td>부모자>자손자</td>
+      <td>다이렉트 자손자에 한해서 설정 가능</td>
+    </tr>
   </table>
   <h2>예제</h2>
   <div>
@@ -80,6 +100,22 @@
     cum accusantium libero corporis fuga, doloribus consequuntur, deserunt quis totam, a reprehenderit. Quibusdam,
     neque.
   </div>
+  <p class="red">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos iusto nobis, perferendis quidem deleniti consequuntur
+    magni tenetur nemo fugiat? Aut qui, reiciendis officiis debitis aspernatur quaerat eligendi magni! Ratione, placeat!
+  </p>
+  <div class="list">
+    <ul>
+      <li>
+        <em>menu1</em>
+      </li>
+      <li>menu2</li>
+      <li>menu3</li>
+      <li>menu4</li>
+    </ul>
+    <em>자손자에 대한 정의</em>
+  </div>
+
   <style>
     * {
       font-size: 18px;
@@ -111,6 +147,26 @@
 
     .red {
       color: red;
+    }
+
+    p.red {
+      text-decoration: underline;
+    }
+    .list em {
+      font-size: 30px;
+    }
+    .list li {
+      color: blue;
+    }
+    .list ul {
+      background-color: aquamarine;
+    }
+    /* 자손자선택법 */
+    .list>ul>li>em {
+      font-style: normal;
+    }
+    .list>em {
+      color: green;
     }
   </style>
 </body>
