@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>여름방학특강신청</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@200&display=swap" rel="stylesheet">
+  <!-- 내부 스타일 시트 -->
+  <style>
+    /* 지금부터 스타일 시트를 작성하겠다하는 선언문 */
+    * {
+      font-family: 'Hahmlet', serif;
+    }
+
+    /* 레전드 스타일 변경 */
+    legend {
+      font-weight: bold;
+      padding: 10px;
+    }
+
+    /* 필드셋 스타일 변경 */
+    /* padding-자신의 크기를 키움, margin-사이 간격을 넣음 */
+    fieldset {
+      margin-bottom: 50px;
+      padding: 10px;
+    }
+
+    /* 라벨스타일변경 */
+    label {
+      padding-right: 20px;
+    }
+
+    /* 후손자선택 */
+    ul li label {
+      width: 120px;
+      display: inline-block;
+      color: green;
+      text-align: right;
+      padding-right: 20px;
+    }
+
+    li {
+      margin-bottom: 5px;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    /* 버튼 스타일 설정 */
+    .btn {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 과제연습 - 개인작업 -->
+  <h1>여름방학특강신청</h1>
+  <form action="" method="get">
+    <fieldset>
+      <legend><strong>수강신청인</strong></legend>
+      <span>학번</span>
+      <input type="text" required="required">
+      <span>이름</span>
+      <input type="text" required="required">
+    </fieldset>
+    <br>
+    <fieldset>
+      <legend><strong>수강과목을 선택하세요.</strong></legend>
+      <table>
+        <tr>
+          <td><span>선호색상</span></td>
+          <td><input type="color"></td>
+        </tr>
+        <tr>
+          <td><span>신청과목(회화)</span></td>
+          <td>
+            <input type="radio" name="paint">영어회화(초급)
+            <input type="radio" name="paint">영어회화(중급)
+            <input type="radio" name="paint">영어회화(고급)
+          </td>
+        </tr>
+        <tr>
+          <td> <span>신청과목(자격)</span></td>
+          <td>
+            <input type="radio" name="license">TOEIC
+            <input type="radio" name="license">TOEFL
+            <input type="radio" name="license">OPIC
+          </td>
+        </tr>
+        <tr>
+          <td> <span>관심분야</span></td>
+          <td>
+            <input type="checkbox">문법
+            <input type="checkbox">Vocaburary
+            <input type="checkbox">회화
+            <input type="checkbox">리스닝
+            <input type="checkbox">뉴스청취
+            <input type="checkbox">독해
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+    <br>
+    <fieldset>
+      <legend><strong>강의시간을 선택해주세요</strong></legend>
+      <table>
+        <tr>
+          <td><span>개강 주</span></td>
+          <td><input type="week" required="required"></td>
+        </tr>
+        <tr>
+          <td><span>강의시간</span></td>
+          <td><input type="time" required="required"></td>
+        </tr>
+      </table>
+    </fieldset>
+    <br>
+    <input type="submit" value="수강신청">
+    <input type="reset" value="다시쓰기">
+  </form>
+  <!-- 함께작업 - 정답 -->
+  <h1>겨울방학특강신청</h1>
+  <form action="" method="">
+    <fieldset>
+      <legend>수강신청인</legend>
+      <label for="schoolNum">학번</label>
+      <input type="text" autofocus required id="schoolNum">
+      <label for="name">이름</label>
+      <input type="text" required id="name">
+    </fieldset>
+    <fieldset>
+      <legend>수강과목을 선택하세요.</legend>
+      <ul>
+        <li>
+          <label for="color">선호색상</label>
+          <input type="color" id="color">
+        </li>
+        <li>
+          <label for="eng">신청과목(회화)</label>
+          <input type="radio" name="eng" id="eng" checked>
+          <span>영어회화(초급)</span>
+          <input type="radio" name="eng" id="eng">
+          <span>영어회화(중급)</span>
+          <input type="radio" name="eng" id="eng">
+          <span>영어회화(고급)</span>
+        </li>
+        <li>
+          <label for="class">신청과목(자격)</label>
+          <input type="radio" name="class" id="class">
+          <span>TOEIC</span>
+          <input type="radio" name="class" id="class">
+          <span>TOEFL</span>
+          <input type="radio" name="class" id="class">
+          <span>OPIC</span>
+        </li>
+        <li>
+          <label for="like">관심분야</label>
+          <input type="checkbox" name="like" id="like">
+          <span>문법</span>
+          <input type="checkbox" name="like" id="like">
+          <span>Vocaburary</span>
+          <input type="checkbox" name="like" id="like">
+          <span>회화</span>
+          <input type="checkbox" name="like" id="like">
+          <span>리스닝</span>
+          <input type="checkbox" name="like" id="like">
+          <span>뉴스청취</span>
+          <input type="checkbox" name="like" id="like">
+          <span>독해</span>
+        </li>
+      </ul>
+    </fieldset>
+    <fieldset>
+      <legend>강의시간을 선택해주세요</legend>
+      <ul>
+        <li>
+          <label for="week">개강 주</label>
+          <input type="week" id="week">
+        </li>
+        <li>
+          <label for="time">강의시간</label>
+          <input type="time" id="time">
+        </li>
+      </ul>
+    </fieldset>
+    <div class="btn">
+      <input type="submit" value="수강신청">
+      <input type="reset" value="다시쓰기">
+    </div>
+  </form>
+</body>
+
+</html>

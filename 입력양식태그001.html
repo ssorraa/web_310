@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>입력양식태그</title>
+</head>
+
+<body>
+  <h1>입력양식태그란?</h1>
+  <p>
+    입력양식은 사용자의 정보를 입력받는 요소<br>
+    예를 들어 로그인/회원가입/검색 등을 들 수 있다
+  </p>
+  <p>
+    form 태그 내부에 입력양식태그들을 넣어서 만든다<br>
+    form 태그는 전달받는 곳에 형식을 기재해야한다
+  </p>
+  <ul>
+    <li>method="get" - 직접 전달 형식(당근마켓)</li>
+    <li>method="post" - 비밀 전달 형식(등기우편)</li>
+  </ul>
+  <em>form 태그 외부에 입력양식 태그들을 기재할 수는 있지만, 전송할 수는 없다</em>
+  <!-- 개발자들이랑 제일 트러블이 많이 생기는 곳!!! 꼭 form태그를 잘 쓰자 -->
+  <h2>입력양식종류</h2>
+  <table border="1">
+    <tr>
+      <td>태그명</td>
+      <td>속성명(type="")</td>
+      <td>설명</td>
+    </tr>
+    <tr>
+      <td>form</td>
+      <td>특성: 보이지 않음/block 요소</td>
+      <td>입력양식의 시작과 끝</td>
+    </tr>
+    <tr>
+      <td rowspan="20">input</td>
+      <td>text</td>
+      <td>글자입력양식</td>
+    </tr>
+    <tr>
+
+      <td>password</td>
+      <td>비밀번호양식설정</td>
+    </tr>
+    <tr>
+
+      <td>submit</td>
+      <td>제출버튼(확인)</td>
+    </tr>
+    <tr>
+
+      <td>reset</td>
+      <td>초기화버튼(취소)</td>
+    </tr>
+    <tr>
+
+      <td>file</td>
+      <td>내컴퓨터에 있는 파일 입력생성</td>
+    </tr>
+    <tr>
+
+      <td>search</td>
+      <td>검색박스로 텍스트 입력시 X버튼이 나타남</td>
+    </tr>
+    <tr>
+
+      <td>button</td>
+      <td>버튼생성</td>
+    </tr>
+    <tr>
+
+      <td>checkbox</td>
+      <td>사각형의 선택박스(다중선택)</td>
+    </tr>
+    <tr>
+
+      <td>radio</td>
+      <td>라디오버튼생성(단일선택)<br>
+        같은 이름이라는 표식을 속성으로 꼭 표시하기 name="동일이름"</td>
+    </tr>
+    <tr>
+
+      <td>email</td>
+      <td>입력양식에 맞게 작성하지 않을경우 오류발생</td>
+    </tr>
+    <tr>
+
+      <td>number</td>
+      <td>숫자입력방식- 다양한 속성과 함께 작성 가능</td>
+    </tr>
+    <tr>
+
+      <td>color</td>
+      <td>컬러를 선택할 수 있는 기능</td>
+    </tr>
+    <tr>
+
+      <td>range</td>
+      <td>슬라이드바- 숫자범위로 나타남, 다양한 속성과 함께 작성 가능</td>
+    </tr>
+
+    <tr>
+
+      <td>datetime,month,week,date,time</td>
+      <td>datetime(국제표준시간-년/월/일/시간, datetime-local로 인식 가능)<br>
+        month(년/월),week(년/주),date(년/월/일),time(시간)</td>
+    </tr>
+    <!-- type 외에 속성들 -->
+    <tr>
+      <td colspan="2">-------------------------------------type 외에 속성들----------------------------------------</td>
+    </tr>
+    <tr>
+
+      <td>required="required"</td>
+      <td>필수작성표시</td>
+    </tr>
+    <tr>
+
+      <td>placeholder="도움글"</td>
+      <td>입력양식의 힌트가 되는 글을 보여줌, 내용을 쓰기시작하면 지워짐</td>
+    </tr>
+    <tr>
+
+      <td>autofocus="autofocus"</td>
+      <td>입력필드에 커서가 자동으로 생성 - 내용작성유도</td>
+    </tr>
+    <tr>
+
+      <td>min="최소값" / max="최대값" / step="건너뛰기"</td>
+      <td>수가 들어가야 하는 모든 속성에 사용가능</td>
+    </tr>
+    <tr>
+
+      <td>value="눈에보이는글씨"</td>
+      <td>외부에 보이는 글씨 변경</td>
+    </tr>
+    <tr>
+      <td>textarea</td>
+      <td>cols="가로크기값(글씨가 들어가는 최대수)"
+        rows="세로값 (줄바꿈의 갯수)"
+      </td>
+      <td>여러행의 글자입력 양식 text와 크기값이 같지 않음</td>
+    </tr>
+    <tr>
+      <td>select</td>
+      <td>multipul="multipul"</td>
+      <td>선택 양식 생성</td>
+    </tr>
+    <tr>
+      <td>option</td>
+      <td></td>
+      <td>옵션 생성</td>
+    </tr>
+    <tr>
+      <td>optgroup</td>
+      <td>label="그룹명"</td>
+      <td>옵션선택의 그룹지정으로 선택되지는 않음</td>
+    </tr>
+    <tr>
+      <td>fieldset</td>
+      <td></td>
+      <td>텍스트 그룹 양식 자동으로 선으로 묶어줌</td>
+    </tr>
+    <tr>
+      <td>legend</td>
+      <td></td>
+      <td>fieldset의 타이틀 선의 내부에 작성됨</td>
+    </tr>
+  </table>
+
+  <strong>label 태그 라는 정의 태그로 form태그 내부의 결합하고자 하는 속성과 함께 사용된다(인라인 요소로 특별한 성질은 없음)</strong>
+  <h3>예제</h3>
+  <form action="" method="get">
+    <fieldset>
+      <legend>input 예제</legend>
+      <input type="text" required="required" autofocus="autofocus"><br>
+      <input type="password" name="" id=""><br>
+      <input type="checkbox" id="idsave"><label for="idsave">아이디 저장</label>
+      <input type="checkbox" name="" id=""><span>비밀번호 저장</span>
+      <input type="checkbox" name="" id=""><span>자동 로그인</span><br>
+      <br>
+      <input type="file"><br>
+      <input type="search" placeholder="검색창">
+      <input type="button" name="" id="" value="검색"><br>
+      <input type="radio" name="gender">남
+      <input type="radio" name="gender">여<br>
+      <input type="email"><br>
+      <input type="number" value="1" min="2" max="10" step="2"><br>
+      <input type="color" name="" id=""><br>
+      <input type="range" name="" id="" value="50"><br>
+      <input type="datetime-local">
+      <input type="month">
+      <input type="week">
+      <input type="date">
+      <input type="time"><br>
+      <input type="submit" value="확인">
+      <input type="reset" value="취소"><br>
+    </fieldset>
+    <br>
+    <fieldset>
+      <legend>input 외 예제</legend>
+      <textarea name="" id="" cols="50" rows="3"></textarea><br>
+      <select name="" id="">
+        <option value="">국어</option>
+        <option value="">수학</option>
+        <option value="">영어</option>
+      </select>
+      <select name="" id="">
+        <optgroup label="한식">
+          <option value="">김치찌개</option>
+          <option value="">된장찌개</option>
+          <option value="">계란국</option>
+          <option value="">비빔밥</option>
+        </optgroup>
+        <optgroup label="중식">
+          <option value="">볶음밥</option>
+          <option value="">짜장</option>
+          <option value="">짬뽕</option>
+          <option value="">마파두부</option>
+          <option value="">만두</option>
+        </optgroup>
+      </select>
+    </fieldset>
+  </form>
+
+  <form action="" method="get">
+    <h3>환영합니다!</h3>
+    <span>
+      통합 근태관리 솔루션 시프티,지금 바로 시작해보세요.
+    </span><br>
+    <span><strong>이메일</strong></span><br>
+    <input type="email"><br>
+    <span><strong>비밀번호</strong></span><br>
+    <input type="password"><br>
+    <span>* 8자 이상이면서 최소한 숫자 하나와 글자 하나를 포함해야 합니다</span><br>
+    <span><strong>비밀번호 재확인</strong></span><br>
+    <input type="password"><br>
+    <span>* 비밀번호를 다시 입력해주세요</span><br>
+    <table>
+      <tr>
+        <td><strong>이름</strong></td>
+        <td><strong>전화번호 (선택)</strong></td>
+      </tr>
+      <tr>
+        <td><input type="text"></td>
+        <td><input type="number"></td>
+      </tr>
+    </table>
+    <input type="checkbox">
+    <span>이용약관과 개인정보취급방침에 동의합니다</span><br>
+    <input type="submit" value="가입하기">
+
+  </form>
+
+</body>
+
+</html>
