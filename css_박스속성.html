@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>박스속성</title>
+</head>
+
+<body>
+  <h1>박스속성</h1>
+  <p>
+    웹 페이지 레이아웃 구성시 가장 중요
+  </p>
+  <ul>
+    <li>margin- 여백</li>
+    <li>padding- 영역</li>
+    <li>width, height- 크기</li>
+  </ul>
+  <p>
+    작성법
+  </p>
+  <ul>
+    <li>전체적용- 50px 하나의 숫자로 4방향 모두 적용</li>
+    <li>각자적용- 위 우측 아래 좌측 / 모두 단위와 함께 작성, 중간에 쉼표 쓰지 않음<br>
+      위아래 좌우 두개로 적용 / 첫번째 숫자- 위아래 적용, 두번째 숫자- 좌우 적용
+    </li>
+    <li>부분적용
+      <ul>
+        <li>margin-left: 왼쪽여백</li>
+        <li>margin-right: 우측여백</li>
+        <li>margin-top: 위쪽여백</li>
+        <li>margin-bottom: 아래쪽여백</li>
+        <li>padding-left: 왼쪽영역</li>
+        <li>padding-right: 우측영역</li>
+        <li>padding-top: 위쪽영역</li>
+        <li>padding-bottom: 아래쪽영역</li>
+      </ul>
+    </li>
+  </ul>
+  <p>
+    width: 가로크기값 <br>
+    width+(padding+border)*2
+  </p>
+  <!-- margin은 여백이므로 크기에 들어가지 않는다 -->
+  <p>
+    height: 세로크기값 <br>
+    height+(padding+border)*2
+  </p>
+  <!-- margin은 여백이므로 크기에 들어가지 않는다 -->
+  <p>
+    border
+  </p>
+  <em>
+    박스의 테두리를 말하며, 가로, 세로 값에 영향을 준다. <br>
+    색상, 굵기, 모양을 한번에 모두 표기시 보인다.
+  </em>
+  <p>
+    작성법 <br>
+    border: black 2px solid (순서와 관계 없음) <br>
+    4면 모두 한번에 나오거나 지정할 수 있음 border-left,right,top,bottom
+  </p>
+  <p>선의 종류 <br>
+    bashed: 긴점선, dotted: 짧은점선, double: 두줄선, none:없음 <br>
+    액자선: groove, ridge, inset, outset</p>
+
+  <h3>배경</h3>
+  <p>
+    배경색, 배경이미지, 배경반복, 배경위치, 배경고정 등을 설정한다.
+  </p>
+  <ul>
+    <li>background-color: 색깔이름, RGB, RGBA로 표기 / transparent: 투명색</li>
+    <li>background-image: url("위치주소기재")</li>
+    <li>background-repeat: repeat(가로, 세로 모두 반복), repeat-x(가로 반복), repeat-y(세로 반복), no-repeat(반복 없음)</li>
+    <li>background-position: 가로위치, 세로위치, 생략시 기본값(left, top) <br>
+      숫자로 지정시 왼쪽 상단 기준에서 시작됨 가로숫자, 세로숫자<br>
+      위치 명으로 기재 가능</li>
+    <li>background-attachment: 배경이미지를 고정시킬지 스크롤할지 결정<br>
+      scroll, fixed</li>
+    <li>background-size: 배경 이미지의 크기 설정
+      <ul>
+        <li>100%: 화면을 비율 상관없이 꽉 채움(contain/cover중 한개랑 똑같아짐)</li>
+        <li>contain: 배경 이미지를 잘리는 부분 관계없이 이미지 우선으로 보임</li>
+        <li>cover: 배경 이미지와 관계없이 화면을 꽉 채움</li>
+      </ul>
+    </li>
+  </ul>
+
+
+  <h2>예제</h2>
+  <div class="box1">
+    <span>100px</span>
+    <span>100px</span>
+    <p class="pad">패딩 50px</p>
+    <p class="mar">마진 50px</p>
+  </div>
+  <div class="box2 margin">
+    <div>box1</div>
+    <div>box2</div>
+    <div>box3</div>
+    <div>box4</div>
+    <div>box5</div>
+  </div>
+  <div class="box2 padding">
+    <div>box1</div>
+    <div>box2</div>
+    <div>box3</div>
+    <div>box4</div>
+    <div>box5</div>
+  </div>
+  <div class="box2 border">
+    <div>box1</div>
+    <div>box2</div>
+    <div>box3</div>
+    <div>box4</div>
+    <div>box5</div>
+  </div>
+  <article class="bg1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic cupiditate itaque eaque magni esse
+    ducimus
+    nostrum adipisci. Accusamus ullam quis ex debitis dicta adipisci odio soluta architecto earum maiores? Accusamus.
+  </article>
+  <article class="bg2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel quidem praesentium aperiam
+    veritatis neque!
+    Similique fuga odio rem, libero, ipsa debitis, non voluptas animi itaque deleniti pariatur omnis temporibus esse.
+  </article>
+  <article class="bg3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil consequatur illum aliquid
+    cupiditate repellat
+    aliquam veniam dicta beatae necessitatibus atque tempore totam nisi eligendi, ut fugit nostrum accusamus sequi
+    culpa?
+  </article>
+  <article class="bg4">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores velit quis labore aspernatur eveniet eos modi
+    incidunt debitis facere distinctio sit repellat iusto dignissimos, ad sint similique error iste pariatur.
+  </article>
+  <style>
+    .box1 {}
+
+    .box1>span {
+      padding: 50px;
+      background-color: aquamarine;
+    }
+
+    .box1>span:nth-child(1) {
+      display: inline-block;
+    }
+
+    /* 인라인시에는 위아래 영역을 제대로 인식못함. 단, 앞에 줄을 미리 맞춰놓은 경우 엑셀처럼 따라감 */
+
+    .box1>span:nth-child(2) {}
+
+    .box1>.pad {
+      padding: 50px;
+      background-color: beige;
+    }
+
+    .box1>.mar {
+      margin: 50px;
+      background-color: beige;
+    }
+
+    .box2 {
+      display: flex;
+      background-color: powderblue;
+      margin-bottom: 20px;
+    }
+
+    .box2>div {
+      width: 200px;
+      height: 200px;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .margin>div:nth-child(1) {
+      margin: 20px;
+    }
+
+    .margin>div:nth-child(2) {
+      margin: 20px 10px 50px 30px;
+    }
+
+    .margin>div:nth-child(3) {
+      margin: 10px 30px;
+    }
+
+    .margin>div:nth-child(4) {
+      margin-bottom: 80px;
+    }
+
+    .margin>div:nth-child(5) {
+      margin-left: 80px
+    }
+
+    .padding>div:nth-child(1) {
+      padding: 20px;
+    }
+
+    .padding>div:nth-child(2) {
+      padding: 20px 10px 50px 30px;
+    }
+
+    .padding>div:nth-child(3) {
+      padding: 10px 30px;
+    }
+
+    .padding>div:nth-child(4) {
+      padding-bottom: 80px;
+    }
+
+    .padding>div:nth-child(5) {
+      padding-left: 80px
+    }
+
+    .border>div:nth-child(1) {
+      border: 20px black dotted;
+    }
+
+    .border>div:nth-child(2) {
+      border: 30px double gray;
+    }
+
+    .border>div:nth-child(3) {
+      border: 10px outset pink;
+    }
+
+    .border>div:nth-child(4) {
+      border-bottom: 20px green dashed;
+      border-right: 10px green dashed;
+      border-top: 5px green dashed;
+      border-left: 30px green solid;
+    }
+
+    .border>div:nth-child(5) {
+      border: 25px lavender ridge
+    }
+
+    article {
+      width: 800px;
+      height: 800px;
+      padding: 20px 50px;
+      border: 1px solid black;
+    }
+    .bg1 {
+      background-image: url(img/web-apple1.png);
+      background-repeat: no-repeat;
+    background-position: center center;}
+    .bg2 {
+      background-image: url(img/web-cola.png);
+      background-size: contain;
+      background-repeat: no-repeat; 
+    }
+    .bg3 {
+      background-image: url(img/web-sea.jpg);
+      background-size: cover;
+      background-attachment: fixed;
+    }
+    .bg4 {
+      background-image: url(img/bg02.png);
+      background-repeat: repeat-x;
+      background-size: contain;
+    }
+  </style>
+</body>
+
+</html>

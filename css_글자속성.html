@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS글자속성</title>
+</head>
+
+<body>
+  <h1>글자속성</h1>
+  <p>
+    글자에 관련된 속성은 글꼴, 글자크기, 글자굵기, 기울임, 줄간격, 대소문자, 글자색상 등<br>
+    주된 7가지를 필수적으로 알고 있어야한다.
+  </p>
+  <p>
+    <em>color를 제외한 위에 6가지는 한줄 쓰기가 가능함</em>
+  </p>
+  <table border="1">
+    <tr>
+      <td>속성명</td>
+      <td>종류</td>
+      <td>설명</td>
+    </tr>
+    <tr>
+      <td>font-family<br>
+        [글꼴]</td>
+      <td>컴퓨터에 등록되어 있는 폰트명/웹폰트 활용 가능</td>
+      <td>글꼴을 인용부호에 감싼다<br>
+        다국적 사용자를 대상으로 웹페이지를 제공할때 <br>
+        serif(명조체), Sans-serif(고딕체) 글꼴 마지막에 작성</td>
+    </tr>
+    <tr>
+      <td>font-size<br>
+        [크기]</td>
+      <td>기본 16px 100% 기준으로 사용</td>
+      <!-- 인쇄할 책자는 12pt를 사용한다 → 12pt=14px → 보통 14px을 많이 쓴다 -->
+      <td>수치에 px등의 단위를 붙여서 지정한다</td>
+    </tr>
+    <tr>
+      <td>font-style<br>
+        [기울임]</td>
+      <td>italic / narmal</td>
+      <td>글자의 기울기를 지정</td>
+    </tr>
+    <tr>
+      <td>font-variant<br>
+        [작은대문자]</td>
+      <td>small-caps / narmal</td>
+      <td>작은 대문자로 변경</td>
+    </tr>
+    <tr>
+      <td>font-weight<br>
+        [두께]</td>
+      <td>bold / normal / 숫자지정(기본값:400, bold:600이상이지만 서체마다 다름)</td>
+      <td>글자의 두께를 지정한다. font의 종류에 따라 달라지며, 일정한 값은 아니다</td>
+    </tr>
+    <tr>
+      <td>line-height<br>
+        [행간]</td>
+      <td>1은 100%의 값으로 줄간격 없음을 표기, 기본값은 1.4는 140%, 2는 글자크기랑 동일</td>
+      <td>글자의 높낮이를 따지는 행간을 조정한다.</td>
+    </tr>
+  </table>
+  <strong>font 라는 속성으로 일렬쓰기 가능<br>
+    font: (font-weight,font-style,font-variant) (font-size/line-hight) (font-family)<br>
+    세가지 순서대로 작성하되, 글자 크기와 글꼴은 생략 할 수 없음<br>
+    (괄호)안의 내용은 순서가 바뀌어도 되고, 실제 작성시 괄호()는 쓰지 않음</strong>
+  <div class="box">
+    font라는 속성이 우선순위이며, 위에 이름값과 같지 않더라도 덮어쓰기 가능
+  </div>
+
+  <h3>글자관련추가속성</h3>
+  <p>
+    주로 글자나 단어보다는 문장에서 사용하는 속성
+  </p>
+  <ul>
+    <li>text-aline
+      <ul>
+        <li>특징- 왼쪽, 오른쪽, 가운데, 양쪽 정렬을 나타냄</li>
+        <li>주의사항- 블럭요소에서만 사용가능</li>
+        <li>justify는 내용 안에 줄바꿈이 일어날만큼 많은 글자양이 있을 경우 적용된게 보임</li>
+      </ul>
+    </li>
+    <li>
+      text-indent
+      <ul>
+        <li>특징- 문단의 첫머리 들여쓰기 기능</li>
+        <li>주의사항- 블럭요소에서만 사용 가능/ 단위작성</li>
+      </ul>
+    </li>
+    <li>
+      text-decoration
+      <ul>
+        <li>underline- 밑줄</li>
+        <li>line-through- 가운데줄(취소선)</li>
+        <li>overline- 윗줄</li>
+        <li>none- 제거</li>
+      </ul>
+    </li>
+    <li>letter-spacing- 자간설정 단위적용</li>
+    <li>text-tranform
+      <ul>
+        <li>uppercase- 모두 대문자 변경</li>
+        <li>lowercase- 모두 소문자 변경</li>
+        <li>capitalize- 띄어쓰기 한 뒤 첫글자만 대문자로 자동 변경(소문자로 변경하진 않음)</li>
+      </ul>
+    </li>
+  </ul>
+  <style>
+    .box {
+      background-color: yellow;
+    }
+  </style>
+
+  <h2>예제</h2>
+  <div class="font">
+    <ul>
+      <li>lorem</li>
+      <li>lorem</li>
+      <li>lorem</li>
+      <li>lorem</li>
+      <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Nostrum exercitationem culpa dolore animi
+        tempore dolorem facere voluptatibus iure,<br> doloribus aliquid dicta recusandae, dignissimos,<br> quam
+        architecto perferendis dolorum maiores! Commodi, fugit.</li>
+      <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Nostrum exercitationem culpa dolore animi
+        tempore dolorem facere voluptatibus iure,<br> doloribus aliquid dicta recusandae, dignissimos,<br> quam
+        architecto perferendis dolorum maiores! Commodi, fugit.</li>
+      <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Nostrum exercitationem culpa dolore animi
+        tempore dolorem facere voluptatibus iure,<br> doloribus aliquid dicta recusandae, dignissimos,<br> quam
+        architecto perferendis dolorum maiores! Commodi, fugit.</li>
+      <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Nostrum exercitationem culpa dolore animi
+        tempore dolorem facere voluptatibus iure,<br> doloribus aliquid dicta recusandae, dignissimos,<br> quam
+        architecto perferendis dolorum maiores! Commodi, fugit.</li>
+    </ul>
+  </div>
+
+  <div class="text">
+    <p class="left">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum laudantium voluptates cumque, magnam tempora vitae
+      pariatur unde, accusamus quod non nihil architecto voluptas ex iste explicabo ad quasi itaque laboriosam!
+    </p>
+    <p class="right">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum laudantium voluptates cumque, magnam tempora vitae
+      pariatur unde, accusamus quod non nihil architecto voluptas ex iste explicabo ad quasi itaque laboriosam!
+    </p>
+    <p class="center">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum laudantium voluptates cumque, magnam tempora vitae
+      pariatur unde, accusamus quod non nihil architecto voluptas ex iste explicabo ad quasi itaque laboriosam!
+    </p>
+    <p class="justify">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum laudantium voluptates cumque, magnam tempora vitae
+      pariatur unde, accusamus quod non nihil architecto voluptas ex iste explicabo ad quasi itaque laboriosam!
+    </p>
+    <p class="indent">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod sequi, blanditiis consequatur id praesentium sed.
+      Excepturi dicta rerum consectetur autem voluptatibus, beatae in rem consequatur saepe, id ratione nulla sed!
+    </p>
+    <ul class="dec">
+      <li>밑줄</li>
+      <li>가운데줄</li>
+      <li>윗줄</li>
+    </ul>
+    <p class="letter">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis et ducimus ipsam laboriosam magni perspiciatis id
+      error, cupiditate eveniet harum a, eos odit praesentium fuga quidem excepturi reprehenderit dolore. Maxime!
+    </p>
+    <ul class="trans">
+      <li>uppercase- 모두 대문자 변경</li>
+      <li>LOWERCASE- 모두 소문자 변경</li>
+      <li>caPI talize- 띄어쓰기 한 뒤 첫글자만 대문자로 자동 변경(소문자로 변경하진 않음)</li>
+    </ul>
+  </div>
+
+  <style>
+    .trans>li:nth-child(1) {
+      text-transform: uppercase;
+    }
+
+    .trans>li:nth-child(2) {
+      text-transform: lowercase;
+    }
+
+    .trans>li:nth-child(3) {
+      text-transform: capitalize;
+    }
+
+    .letter {
+      letter-spacing: 20px;
+    }
+
+    .dec>li {
+      margin-bottom: 20px;
+    }
+
+    .dec>li:nth-child(1) {
+      text-decoration: underline;
+    }
+
+    .dec>li:nth-child(2) {
+      text-decoration: line-through;
+    }
+
+    .dec>li:nth-child(3) {
+      text-decoration: overline;
+    }
+
+    .text p {
+      background-color: beige;
+    }
+
+    .text>.left {
+      text-align: left;
+    }
+
+    .text>.right {
+      text-align: right;
+    }
+
+    .text>.center {
+      text-align: center;
+    }
+
+    .text>.justify {
+      text-align: justify;
+    }
+
+    .text>.indent {
+      text-indent: 50px;
+    }
+
+    .font>ul>li {
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    .font>ul>li:nth-child(1) {
+      font-size: 20px;
+    }
+
+    .font>ul>li:nth-child(2) {
+      font-style: italic;
+    }
+
+    .font>ul>li:nth-child(3) {
+      font-variant: small-caps;
+    }
+
+    .font>ul>li:nth-child(4) {
+      font-weight: 600;
+    }
+
+    .font>ul>li:nth-child(5) {
+      line-height: 2;
+    }
+
+    .font>ul>li:nth-child(6) {
+      font: bold italic small-caps 10px/1 '맑은 고딕';
+    }
+
+    .font>ul>li:nth-child(7) {
+      font: 20px/2.5 '굴림';
+    }
+
+    .font>ul>li:nth-child(8) {
+      font: 30px 'arial';
+    }
+  </style>
+</body>
+
+</html>
