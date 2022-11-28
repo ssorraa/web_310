@@ -1,5 +1,7 @@
+/* 언어 설정 */
 @charset "UTF-8";
 
+/* box2-1,2-2 가로 정렬 */
 .box2::after {
   content: "";
   clear: both;
@@ -14,6 +16,7 @@
   width: 50%;
   float: left;
 }
+/* box4-1~4-3 가로 정렬 */
 .box4::after {
   content: "";
   clear: both;
