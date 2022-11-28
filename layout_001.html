@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>레이아웃속성</title>
+  <!-- 외부스타일시트작성 -->
+  <!-- 그리드가이드연결 -->
+  <link rel="stylesheet" href="grid-guide.css">
+  <!-- 그리드가이드css는 클래스이름에 따라 기본값이 적용되도록 제작이 되어있는 시트다
+  부모자와 자손자의 색이 다르고 글씨의 크기 변환을 할 수 없다 -->
+  <link rel="stylesheet" href="style_layout001.css">
+</head>
+
+<body>
+  <h1>레이아웃이란?</h1>
+  <p>
+    블럭들의 요소를 필요한 곳에서 가로정렬을 하는 방법이다.
+  </p>
+  <article>
+    <h3>float</h3>
+    <p>
+      박스를 좌측이나 우측부터 시작하는 시작점 설정하는 속성<br>
+      left/right
+    </p>
+  </article>
+  <article>
+    <h3>clear</h3>
+    <p>
+      float랑 같이 쓰임, 여백이 생겼을 경우 float를 해제시킬 수 있는 속성<br>
+    left/right: 좌측/우측 빈공간부터 채워라, both: 양 옆을 비워라
+    </p>
+  </article>
+  <h1>그리드가이드 예시</h1>
+  <div class="boxA">
+    박스A
+  </div>
+  <div class="boxB">
+    박스B
+  </div>
+  <div class="boxC">
+    <div class="box1">박스1</div>
+    <div class="box2">박스2</div>
+  </div>
+<div class="boxD">
+  <div class="box3">
+    <div class="box3-1">박스3-1</div>
+    <div class="box3-2">박스3-2</div>
+    <div class="box3-3">박스3-3</div>
+  </div>
+</div>
+</body>
+
+</html>
