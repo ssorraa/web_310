@@ -26,15 +26,124 @@
       <td>해상도에 따라 상대적으로 달라지는 기본 단위</td>
       <td>(디바이스기준)100%기준으로 계산한 %단위</td>
       <td>%단위를 1/100로 표현한 숫자단위</td>
+      <!-- 하지만 em은 %랑 다르게 부모자의 영햐을 받기 때문에 body에 종속되는 rem을 보통 쓴다 -->
       <td>한글 등 문서작성시 기본 글자단위</td>
     </tr>
     <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td colspan="5"></td>
+    </tr>
+    <tr>
+      <td>8px기준</td>
+      <td>8px</td>
+      <td>50%</td>
+      <td>0.5em</td>
+      <td>6pt</td>
+    </tr>
+    <tr>
+      <td>h6기준</td>
+      <td>10px</td>
+      <td>62.50%</td>
+      <td>0.625em</td>
+      <td>8pt</td>
+    </tr>
+    <tr>
+      <td>12px기준</td>
+      <td>12px</td>
+      <td>75%</td>
+      <td>0.75em</td>
+      <td>9pt</td>
+    </tr>
+    <tr>
+      <td>h5기준</td>
+      <td>13px</td>
+      <td>81.3%</td>
+      <td>0.813em</td>
+      <td>10pt</td>
+    </tr>
+    <tr>
+      <td>h4기준</td>
+      <td>16px</td>
+      <td>100%</td>
+      <td>1em</td>
+      <td>12pt</td>
+    </tr>
+    <tr>
+      <td>h3기준</td>
+      <td>18px</td>
+      <td>112.5%</td>
+      <td>1.125em</td>
+      <td>14pt</td>
+    </tr>
+    <tr>
+      <td>20px기준</td>
+      <td>20px</td>
+      <td>125%</td>
+      <td>1.25em</td>
+      <td>15pt</td>
+    </tr>
+    <tr>
+      <td>h2기준</td>
+      <td>24px</td>
+      <td>150%</td>
+      <td>1.5em</td>
+      <td>18pt</td>
+    </tr>
+    <tr>
+      <td>h1기준</td>
+      <td>32px</td>
+      <td>200%</td>
+      <td>2em</td>
+      <td>24pt</td>
     </tr>
   </table>
+  <em><a href="http://pxtoem.com/">px에서 em으로 변환을 도와주는 사이트: pxtoem.com</a></em>
+  <br>
+  <strong>단위에서 혼동되는 경우</strong>
+  <h4>em은 %랑 다르게 부모자의 영향을 받아 크기가 변동된다<br>
+    부모자의 영향을 받지 않고 em 단위를 사용하고 싶은 경우 rem(root의 em)을 사용한다<br>
+  rem은 body의 크기의 영향을 받는다</h4>
+  <h3>vw, vh</h3>
+  <p>
+    vw는 뷰포트의 너비값의 1/100 단위이다<br>
+    vh는 뷰포트의 높이값의 1/100 단위이다
+  </p>
+  <strong>반응형 웹페이지 제작시 가장 유용하게 사용된다</strong>
+  <div class="box1">
+    <h3>뷰포트 예제</h3>
+    <p class="v01">
+      단위의 고찰
+    </p>
+    <p class="v02">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla esse atque, at beatae ducimus voluptatibus dolorum veniam quaerat commodi ea veritatis cum libero quibusdam sequi, sint maiores, doloribus asperiores. Voluptate?
+    </p>
+  </div>
+
+  <div class="box">
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates minima esse iste reprehenderit temporibus, doloremque illum quidem neque suscipit expedita obcaecati possimus, voluptatum quia harum at, modi necessitatibus voluptatibus? Ratione.
+    </p>
+    <p>
+      <span>Lorem ipsum</span>, dolor sit amet consectetur adipisicing elit. Voluptates minima esse iste reprehenderit temporibus, doloremque illum quidem neque suscipit expedita obcaecati possimus, voluptatum quia harum at, modi necessitatibus voluptatibus? Ratione.
+    </p>
+  </div>
+  <style>
+    .box p:nth-child(1) {
+      font-size: 20px;
+    }
+    .box p:nth-child(2) {
+      font-size: 10px;
+    }
+    .box p:nth-child(2) span {
+      background-color: antiquewhite;
+      font-size: 2rem;
+    }
+    .box1 .v01 {
+      font-size: 5vw;
+    }
+    .box1 .v02 {
+      width: 50vw;
+      background-color: palegoldenrod;
+    }
+  </style>
 </body>
 </html>
