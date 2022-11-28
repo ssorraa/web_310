@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+.box3::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.box3>.boxA {
+  width: 70%;
+  float: left;
+}
+
+.box3>.boxB {
+  width: 30%;
+  float: left;
+}
