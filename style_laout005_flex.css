@@ -1,0 +1,197 @@
+@charset "utf-8";
+
+/* .box {
+  display: flex;
+}
+
+.boxA{
+  width: 20%;
+}
+
+.boxA.boxA-1 {
+}
+
+.boxA.boxA-2 {
+}
+
+
+
+.boxB {
+  width: 80%;
+}
+
+.boxB-2 {
+  display: flex;
+}
+
+.box1 {
+  flex: 1;
+}
+
+.box2 {
+  flex: 1;
+}
+
+.box3 {
+  flex: 1;
+}
+
+.boxB-3 {
+  display: flex;
+}
+
+.box4 {
+  width: 75%;
+}
+
+.box5 {
+  width: 25%;
+} */
+
+/* .wrap {
+  display: flex;
+}
+.boxA {
+  width: 20%;
+}
+.boxA-2 {
+  width: 80%;
+}
+.boxC {
+  display: flex;
+}
+.boxC>div {
+  flex: 1;
+}
+.boxD {
+  display: flex;
+}
+.box
+} */
+
+
+/* ClearBox정렬방식
+/* 박스A-박스A-2 가로정렬 
+.boxA {
+  width: 20%;
+  float: left;
+}
+.boxA-2 {
+  width: 80%;
+  float: left;
+}
+.wrap::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+/* 박스3~5 가로정렬 
+.box3 {
+  width: 33.3333%;
+  float: left;
+}
+
+.box4 {
+  width: 33.3333%;
+  float: left;
+}
+.box5 {
+  width: 33.3333%;
+  float: left;
+}
+.boxC::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+/* 박스6-7 가로 정렬 
+.box6 {
+  width: 80%;
+  float: left;
+}
+.box7 {
+  width: 20%;
+  float: left;
+}
+.boxD::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+--------------------------*/
+
+/* flex정렬방식 */
+
+/* wrap플렉스 정렬 */
+
+
+
+
+
+@media (min-width:320px) {
+  /* 박스D플렉스정렬 */
+.boxD {
+  display: flex;
+}
+
+.box6 {
+  width: 80%;
+}
+
+.box7 {
+  width: 20%;
+}
+
+}
+@media (min-width:600px) {
+/* 박스C플렉스정렬 */
+.boxC {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  align-content: center;
+}
+/* flex-wrap: wrap이 없으면 100% 초과해도 상자에 있는 아이템의 크기를 조절함
+있으면 100%로 설정돼서 아이템 크기가 100%를 넘어가면 다른 곳으로 놓음*/
+.box3 {width: 50%;
+order: 1;}
+.box4 {width: 50%;
+order: 0;}
+.box5 {width: 50%;
+order: 0;}
+/* .box5 {align-self: flex-end;} */
+/* .boxC>div {
+  flex: 1
+} */
+}
+@media (min-width:960px) {
+  .wrap {
+    display: flex;
+  }
+  
+  .boxA {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  
+  /* .boxA>div {
+    flex: 1 */
+  }
+  /* .box1 {
+    flex: 20%;
+  }
+  .box2 {
+    flex: 80%;
+  } */
+  .box1 {
+    flex: 20%;
+  }
+  .box1 {
+    flex: 80%;
+  }
+  .boxA-2 {
+    flex: 80%;
+  }
+}

@@ -1,6 +1,7 @@
+/* 언어설정 */
 @charset "UTF-8";
 
-.boxA::after {
+/* .boxA::after {
   content: "";
   clear: both;
   display: block;
@@ -51,4 +52,64 @@
 .boxD>.boxD-2 {
   width: 80%;
   float: left;
+} */
+
+/* 박스1-박스2 가로정렬 */
+.box1 {
+  float: left;
+  width: 20%;
+}
+
+.box2 {
+  float: left;
+  width: 80%;
+}
+
+/* 콘텐츠를 넣을 수 있지만 넣지 않고,
+양옆을 비우고,
+블럭 형태로 배치 */
+.boxA::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+/* 박스B설정 */
+
+/* 박스3~박스5 가로정렬 */
+.boxC>.box3 {
+  float: left;
+  width: 33.3333%;
+}
+
+.boxC>.box4 {
+  float: left;
+  width: 33.3333%;
+}
+
+.boxC>.box5 {
+  float: left;
+  width: 33.3333%;
+}
+
+.boxC::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+/* 박스6-7가로정렬 */
+
+.boxD>.box6 {
+  float: left;
+  width: 20%;
+}
+
+.boxD>.box7 {
+  float: left;
+  width: 80%;
+}
+.boxD::after {
+  content: "";
+  clear: both;
+  display: block;
 }

@@ -1,54 +1,38 @@
 @charset "UTF-8";
 
-.boxA::after {
-  content: "";
-  clear: both;
-  display: block;
+
+/* 박스A 플렉스정렬 */
+.boxA {
+  display: flex;
 }
 
-.boxA>.boxA-1 {
+.box1 {
   width: 20%;
-  float: left;
 }
 
-.boxA>.boxA-2 {
+.box2 {
   width: 80%;
-  float: left;
 }
 
-.boxC::after {
-  content: "";
-  clear: both;
-  display: block;
+/* 박스B정렬 */
+/* 박스C 플렉스정렬 */
+.boxC {
+  display: flex;
 }
 
-.boxC>.boxC-1 {
-  width: 33.3333%;
-  float: left;
+.boxC>div {
+  flex: 1;
 }
 
-.boxC>.boxC-2 {
-  width: 33.3333%;
-  float: left;
+/* 박스D 플렉스 정렬 */
+.boxD {
+  display: flex;
 }
 
-.boxC>.boxC-3 {
-  width: 33.3333%;
-  float: left;
-}
-
-.boxD::after {
-  content: "";
-  clear: both;
-  display: block;
-}
-
-.boxD>.boxD-1 {
+.box6 {
   width: 20%;
-  float: left;
 }
 
-.boxD>.boxD-2 {
+.box7 {
   width: 80%;
-  float: left;
 }
