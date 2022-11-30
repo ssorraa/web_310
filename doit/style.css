@@ -1,0 +1,42 @@
+/* 언어설정 */
+@charset "utf-8";
+
+/* 전체설정 */
+* {
+  margin: 0;
+  padding: 0;
+}
+#wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* flex-flow: row wrap; */
+  width: 90%;
+  /* margin: 0 5% 0 5%; */
+  margin: 0 auto;
+  /* 화면 중앙 배치 */
+}
+
+/* 헤더설정 */
+.header {
+  display: flex;
+  width: 100%;
+}
+.header>h1 {
+  background-color: #ff6b57;
+  width: 12.5%;
+  height: 142px;
+}
+.header>nav {
+  background-color: #ff6b57;
+  width: 87.5%;
+  height: 80px;
+}
+
+/* 슬라이더영역 */
+.slider_section {
+  width: 50%;
+  background-color: #3c90be;
+  height: 440px;
+
+}
