@@ -6,6 +6,7 @@
   margin: 0;
   padding: 0;
 }
+
 #wrap {
   display: flex;
   flex-direction: row;
@@ -21,12 +22,21 @@
 .header {
   display: flex;
   width: 100%;
+  /* h1을 헤더를 중심으로 상대적인 포지션으로 바꿔주기 */
+  position: relative;
+  justify-content: end;
 }
+
 .header>h1 {
   background-color: #ff6b57;
   width: 12.5%;
   height: 142px;
+  /* 띄어내기 */
+  position: absolute;
+  left: 0;
+  top: 0;
 }
+
 .header>nav {
   background-color: #ff6b57;
   width: 87.5%;
@@ -38,5 +48,61 @@
   width: 50%;
   background-color: #3c90be;
   height: 440px;
+}
 
+/* 갤러리영역 */
+.gallery_section {
+  background-color: #f8de73;
+  width: 27%;
+}
+
+/* 인기검색어영역 */
+.rankup_section {
+  background-color: #00d2a5;
+  width: 23%;
+}
+
+/* 최신글영역 */
+.latest_post_section {
+  background-color: #9cabe4;
+  width: 30%;
+  height: 270px;
+}
+
+/* 인기글영역 */
+.popular_post_section {
+  background-color: #d76817;
+  width: 30%;
+}
+
+/* 배너영역 */
+.banner_section {
+  width: 23%;
+  display: flex;
+  flex-direction: column;
+}
+
+.banner_section>div {
+  flex: 1;
+}
+
+.banner_box_1 {
+  background-color: #0175bb;
+}
+
+.banner_box_2 {
+  background-color: #1261c9;
+}
+
+/* 소셜영역 */
+.social_section {
+  background-color: #fe6eda;
+  width: 17%;
+}
+
+/* 푸터영역 */
+.footer {
+  width: 100%;
+  background-color: #474747;
+  height: 94px;
 }
