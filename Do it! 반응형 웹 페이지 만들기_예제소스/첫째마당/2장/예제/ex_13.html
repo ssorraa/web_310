@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<title></title>
+<style>
+*{
+margin:0;
+padding:0;
+}
+    
+video, iframe{
+width:100%;
+max-width:100%;
+}
+</style>
+</head>
+<body>
+    <div id="wrap">
+        <iframe src="https://player.vimeo.com/video/203671501" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
+<script src="source/jquery.min.js"></script>
+<script src="source/jquery.fitvids.js"></script>
+<script>
+$("#wrap").fitVids();
+</script>
+</body>
+</html>
