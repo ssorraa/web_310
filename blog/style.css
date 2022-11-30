@@ -1,0 +1,38 @@
+/* 언어설정 */
+@charset "utf-8";
+
+/* 전체설정 */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* 미디어쿼리구간------------------------------------- */
+/* 모바일구간 */
+/* 태블릿구간 */
+/* 768px 이상일떄 ---------------- */
+@media (min-width: 768px) {
+
+/* 박스3-박스4 가로정렬 */
+.box3 {
+  width: 70%;
+  float: left;
+}
+.box4 {
+  width: 30%;
+  float: left;
+}
+.boxA::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+}
+
+/* 웹구간 */
+/* 1280px 이상일때----------------- */
+@media (min-width: 1280px) {
+.box1,.boxA {width: 1190px;
+margin: 0 auto;}
+}
