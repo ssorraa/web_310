@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<title></title>
+<style>
+*{
+margin:0;
+padding:0;
+}
+    
+img{
+display:block;
+margin:0 auto;
+}
+</style>
+</head>
+<body>
+    <picture>
+        <source media="(min-width:1280px)"
+                srcset="source/venice-1280.jpg,
+                        source/venice-1280@2x.jpg 2x">
+
+        <source media="(min-width:768px)"
+                srcset="source/venice-768.jpg,
+                        source/venice-768@2x.jpg 2x">
+                
+        <source media="(min-width:320px)"
+                srcset="source/venice-320.jpg,
+                        source/venice-320@2x.jpg 2x">
+                
+        <img src="source/venice-1280@2x.jpg">
+    </picture>
+</body>
+</html>
