@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #wrap {
+      display: flex;
+      flex-flow: row wrap;
+    }
+
+    /* 헤더설정 */
+    .header {
+      display: flex;
+      width: 100%
+    }
+
+    .logo {
+      background-color: aquamarine;
+      width: 20%;
+    }
+
+    .logo>h1 {
+      background-color: aqua;
+
+    }
+
+    .menu {
+      width: 80%;
+      background-color: beige;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .menu>a {
+      margin-top: 2%;
+      display: block;
+    }
+
+    /* 1단설정 */
+    .box1 {
+      display: flex;
+      width: 100%;
+      height: 500px;
+    }
+
+    .time {
+      background-color: palevioletred;
+      flex: 1;
+    }
+
+    .tea {
+      background-color: mediumvioletred;
+      flex: 1;
+    }
+
+    .tea>table>tr:nth-child(1)>td:nth-child(1) {
+      text-align: center;
+    }
+
+    /* 2단설정 */
+    .box2 {
+      width: 100%;
+      height: 150px;
+      background-color: antiquewhite;
+    }
+
+    .box2>p {
+      margin: 0;
+    }
+
+    /* 3단설정 */
+    .box3 {
+      width: 100%;
+      height: 100px;
+      background-color: burlywood;
+    }
+
+    .box3>p {
+      margin: 0;
+    }
+
+    /* 푸터설정 */
+    .footer {
+      width: 100%;
+      background-color: dimgray;
+    }
+
+    .footer>p {
+      margin: 0;
+      color: white;
+    }
+
+    .footer>p:nth-child(1) {
+      font-style: italic;
+      margin-bottom: 16px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <header class="header">
+      <div class="logo">
+        <h1>LOGO</h1>
+      </div>
+      <div class="menu">
+        <a href="#">menu1</a>
+        <a href="#">menu2</a>
+        <a href="#">menu3</a>
+        <a href="#">menu4</a>
+        <a href="">menu5</a>
+      </div>
+    </header>
+    <div class="box1">
+      <div class="time">
+        <h2>공연시간</h2>
+        <table border="1">
+          <tr>
+            <td colspan="3">공연요금</td>
+          </tr>
+          <tr>
+            <td>구분</td>
+            <td>R석</td>
+            <td>S석</td>
+          </tr>
+          <tr>
+            <td>성인</td>
+            <td>50,000원</td>
+            <td>30,000원</td>
+          </tr>
+          <tr>
+            <td>청소년</td>
+            <td>40,000원</td>
+            <td>20,000원</td>
+          </tr>
+          <tr>
+            <td rowspan="2">공연시간</td>
+            <td>1회차</td>
+            <td>13:00~15:00</td>
+          </tr>
+          <tr>
+
+            <td>2회차</td>
+            <td>16:00~18:00</td>
+          </tr>
+        </table>
+      </div>
+      <div class="tea">
+        <h2>한국의차</h2>
+        <table border="1">
+          <tr>
+            <td colspan="6"><strong>한국의차</strong></td>
+
+          </tr>
+          <tr>
+            <td rowspan="6"><strong>뿌리차</strong></td>
+            <td>인삼차</td>
+            <td rowspan="9"><strong>과일차</strong></td>
+            <td>수정과</td>
+            <td rowspan="5"><strong>잎차</strong></td>
+            <td>뽕잎차</td>
+          </tr>
+          <tr>
+
+            <td>당귀차</td>
+
+            <td>유자차</td>
+
+            <td>감잎차</td>
+          </tr>
+          <tr>
+
+            <td>생강차</td>
+
+            <td>구기자차</td>
+
+            <td>솔잎차</td>
+          </tr>
+          <tr>
+
+            <td>긹차</td>
+
+            <td>대추차</td>
+
+            <td>국화차</td>
+          </tr>
+          <tr>
+
+            <td>둥글레차</td>
+
+            <td>오미자차</td>
+
+            <td>이슬차</td>
+          </tr>
+          <tr>
+
+            <td>마차</td>
+
+            <td>매실차</td>
+            <td rowspan="4">기타</td>
+            <td>두충차</td>
+          </tr>
+          <tr>
+            <td rowspan="3">곡물차</td>
+            <td>보리차</td>
+
+            <td>모과차</td>
+
+            <td>영지버섯</td>
+          </tr>
+          <tr>
+
+            <td>옥수수차</td>
+
+            <td>산수유차</td>
+
+            <td>귤강차</td>
+          </tr>
+          <tr>
+
+            <td>현미차</td>
+
+            <td>탱자차</td>
+
+            <td>쌍화차</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="box2">
+      <p>
+        주요기사
+      </p>
+    </div>
+    <div class="box3">
+      <p>
+        광고영역
+      </p>
+    </div>
+    <footer class="footer">
+      <p>
+        대전시 서구 둔산동 그린컴퓨터
+      </p>
+      <p>copyright © 제작자.제작년도. All Rights Reserverd.</p>
+    </footer>
+  </div>
+</body>
+
+</html>
