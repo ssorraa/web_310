@@ -1,28 +1,82 @@
 @charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
 
-
-@media (min-width: 768px)
-{.box3 {
-  width: 70%;
-  float: left;
+/* 전체 */
+*{
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
 }
 
-.box4 {
-  width: 30%;
-  float: left;
+ul {
+  list-style: none;
 }
 
-.boxA::after {
-  content: "";
+/* 박스1 */
+.box1 {}
+
+.box1>h1 {
+  font-weight: normal;
+  margin: 0;
+  font-family: 'Paytone One', sans-serif;
+  font-size: 30px;
+}
+
+.box1>h1>a {
+  color: #8a9d9e;
+}
+
+/* 박스2 */
+.box2 {
+  background-color: #7cbac1;
+}
+
+.box2>.gmb {
+
+}
+
+.box2>.gmb>ul {
+  display: flex;
+}
+
+.box2>.gmb>ul>li {
+  padding: 15px 10px;
+}
+
+.box2>.gmb>ul>li>a {
   display: block;
-  clear: both;
-}
+  color: #000;
+  font-size: 20px;
 }
 
-@media (min-width: 1024px)
-{
-  .box1,.boxA {
+/* 테블릿-768이상 */
+@media (min-width: 768px) {
+  .box3 {
+    width: 70%;
+    float: left;
+  }
+
+  .box4 {
+    width: 30%;
+    float: left;
+  }
+
+  .boxA::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+
+/* 웹-1024이상 */
+@media (min-width: 1024px) {
+
+  .box1,
+  .boxA,.gmb {
     width: 1024px;
-  margin: 0 auto;
+    margin: 0 auto;
   }
 }

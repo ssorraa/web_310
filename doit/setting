@@ -1,0 +1,137 @@
+<조작>
+  flying {스페이스}
+  달리기 {왼쪽 Ctrl}
+  뒤로걷기 {s}
+  앞으로걷기 {w}
+  오른쪽으로걷기 {d}
+  왼쪽으로 걷기 {a}
+  웅크리기 {왼쪽 shift}
+  점프 {스페이스}
+<게임플레이>
+  DecreaseDroneReach {아래쪽 화살표}
+  IncreaseDroneReach {위쪽 화살표}
+  공격/파괴 {왼쪽 버튼}
+  블록 선택 {가운데 버튼}
+  아이템 사용/블록 놓기{오른쪽 버튼}
+<보관함>
+  DropSelectedStack {왼c+q}
+  다른 손과아이템맞바꾸기 {f}
+  단축바슬롯1 {1}
+  단축바슬롯2 {2}
+  단축바슬롯3 {3}
+  단축바슬롯4 {4}
+  단축바슬롯5 {5}
+  단축바슬롯6 {6}
+  단축바슬롯7 {7}
+  단축바슬롯8 {8}
+  단축바슬롯9 {9}
+  인벤토리열기/닫기 {e}
+  선택한 아이템 떨어뜨리기 {q}
+  코스매틱아머인벤토리열기 {}
+<크리에이티브모드>
+  단축바불러오기 {x}
+  단축바저장 {c}
+<멀티플레이>
+  대화열기 {t}
+  명령어열기 {/}
+  사회적상호작용화면 {p}
+  플레이어목록보기 {tab}
+<기타>
+  OpenSoundMufflerScreen {}
+  ToggleCleanView {}
+  발전과제 {l}
+  스크린샷찍기 {f2}
+  시네마틱카메라전환 {}
+  시점전환 {f5}
+  전체화면전환 {f11}
+  플레이어강조(관전) {}
+<blur>
+  ToggleScreenBlur {F10}
+<chunk-pregenerator>
+  OptionGui {i}
+<Configured>
+  OpenModList {}
+<CrashUtilities>
+  CopyContainerClass {}
+  OpenTheCrashUtilitesScreen {왼C+u}
+  ShowSlotIndexTooltips {}
+<Create>
+  근처공구상자열기 {왼쪽alt}
+  메뉴세부정보보기 {왼쪽alt}
+<DoubleSlabs>
+  ToggleVerticalSlabPlavement {CapsLock}
+<EntityCulling>
+  DebugToggleCulling {}
+<FpsReducer>
+  OpenConfigGui {End}
+  ReduceFpsManually {pause}
+<InvMove>
+  ToggleUiMovement {}
+<JEI(CheatMode)>
+  Cheat1Item {왼쪽버튼}
+  Cheat1Item {오른쪽버튼}
+  Cheat1Stack {왼s+왼쪽버튼}
+  Cheat1Stack {가운데버튼}
+  아이템치트모드켜기/끄기 {}
+<JEI(DevTool)>
+  CopyRecipeIdToClipboard {}
+<JEI(EditMode)>
+  HideIngredient {왼c+왼쪽버튼}
+  HideIngredient(wildcard) {왼c+오른쪽버튼}
+  모드숨기기/편집전환 {}
+<JEI(HoveringWithMouseOverConfigButton)>
+  ToggleCheatMode {왼C+왼쪽버튼}
+<JEI(HoveringWithMouse)>
+  ShowRecipe {왼쪽버튼}
+  SHowUses {오른쪽버튼}
+  북마크추가/제거 {a}
+  아이템사용법보기 {u}
+  아이템제작법보기 {r}
+<JEI(Overlays)>
+  검색창선택 {왼c+f}
+  다음페이지표시 {}
+  북마크된재료표시/숨기기 {}
+  아이템목록겹침켜기/끄기 {왼C+o}
+  이전페이지표시 {}
+<JEI(Recipes)>
+  CloseRecipesGui {Escape}
+  NextRecipePage {PageDown}
+  PreviousRecipePage {PageUp}
+  다음제작법범주표시 {왼S+PageDown}
+  이전아이템제작법보기 {backspace}
+  이전제작법범주표시 {왼S+PageUp}
+<JEI(SearchFilter)>
+  ClearSearchFilter {오른쪽버튼}
+  NextSearch {아래쪽화살표}
+  PreviousSearch {위쪽화살표}
+<Jade>
+  Narrate {6}
+  설정열기 {0}
+  세부정보표시 {왼쪽Shift}
+  액체전환 {2}
+  오버레이표시 {1}
+  용도표시 {4}
+  제작법표시 {3}
+<JourneyMap>
+  ChangeMapType {[}
+  Show/HideMinimap {왼c+j}
+  ToggleAllWaypoints {z}
+  WaypointManager {n}
+  경유지생성 {b}
+  미니맵프리셋변경 {\}
+  전체화면숨기기/보이기 {j}
+  축소 {-}
+  확대 {=}
+<JourneyMapFullscreenMap>
+  ChatPosition(AtCursor) {c}
+  CreateWaypoint(AtCursor) {b}
+  DisableFullscreenButtons {h}
+  OptionManager {o}
+  PanEast(16Blocks) {오른쪽화살표}
+  PanNorth(16Blocks) {위쪽화살표}
+  PanSouth(16Blocks) {아래쪽화살표}
+  PanWest(16Blocks) {왼쪽화살표}
+<LightOverlay>
+  광도오버레이켜기/끄기 {f7}
+<장신구>
+  

@@ -1,10 +1,53 @@
 /* 언어설정 */
 @charset "utf-8";
+/* 구글폰트설정 */
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
 
 /* 전체설정 */
 * {
   margin: 0;
   padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* 기본CSS */
+/* 로고설정 */
+.logo {
+  font-size: 30px;
+  font-weight: normal;
+  font-family: 'Paytone One', sans-serif;
+}
+
+.logo>a {
+  text-decoration: none;
+  color: #8a9d9e;
+}
+
+/* 메뉴설정 */
+.gnb>ul {
+  display: flex;
+}
+
+.gnb>ul>li {
+  width: auto;
+}
+
+.gnb>ul>li>a {
+  display: block;
+  padding: 10px;
+  font-size: 14pt;
+}
+.box2 {
+  background-color: #7cbac1;
+  padding: 5px;
 }
 
 
@@ -14,25 +57,31 @@
 /* 768px 이상일떄 ---------------- */
 @media (min-width: 768px) {
 
-/* 박스3-박스4 가로정렬 */
-.box3 {
-  width: 70%;
-  float: left;
-}
-.box4 {
-  width: 30%;
-  float: left;
-}
-.boxA::after {
-  content: "";
-  clear: both;
-  display: block;
-}
+  /* 박스3-박스4 가로정렬 */
+  .box3 {
+    width: 70%;
+    float: left;
+  }
+
+  .box4 {
+    width: 30%;
+    float: left;
+  }
+
+  .boxA::after {
+    content: "";
+    clear: both;
+    display: block;
+  }
 }
 
 /* 웹구간 */
 /* 1280px 이상일때----------------- */
 @media (min-width: 1280px) {
-.box1,.boxA {width: 1190px;
-margin: 0 auto;}
+
+  .box1,
+  .boxA,.gnb {
+    width: 1190px;
+    margin: 0 auto;
+  }
 }
