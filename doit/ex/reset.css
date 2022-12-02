@@ -9,6 +9,9 @@ a {
   color: cornsilk;
   text-decoration: none;
 }
+#wrap {
+  flex-direction: column;
+}
 
 /* 인터페이스 영역설정 */
 
@@ -135,6 +138,7 @@ a {
 /* 해상도설정########################## */
 /* 모바일-320px */
 @media (max-width:767px) {
+
 
   /* 인터페이스 m */
   .interface {
