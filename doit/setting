@@ -38,7 +38,7 @@
   플레이어목록보기 {tab}
 <기타>
   OpenSoundMufflerScreen {}
-  ToggleCleanView {}
+  ToggleCleanView {v}
   발전과제 {l}
   스크린샷찍기 {f2}
   시네마틱카메라전환 {}
@@ -68,7 +68,7 @@
 <InvMove>
   ToggleUiMovement {}
 <JEI(CheatMode)>
-; (JEI전체확인)
+; (JEI전체확인) -
   Cheat1Item {*}
   Cheat1Item {*}
   Cheat1Stack {*}
@@ -107,25 +107,25 @@
   PreviousSearch {위쪽화살표}
 <Jade>
   Narrate {*}
-  설정열기 {0}
+  설정열기 {*k}
   세부정보표시 {왼쪽Shift}
-  액체전환 {2}
-  오버레이표시 {1}
-  용도표시 {4}
-  제작법표시 {3}
+  액체전환 {*}
+  오버레이표시 {*}
+  용도표시 {*}
+  제작법표시 {*}
 <JourneyMap>
   ChangeMapType {[}
   Show/HideMinimap {왼c+j}
-  ToggleAllWaypoints {z}
-  WaypointManager {n}
-  경유지생성 {b}
-  미니맵프리셋변경 {\}
+  ToggleAllWaypoints {*}
+  WaypointManager {*}
+  경유지생성 {p}
+  미니맵프리셋변경 {]}
   전체화면숨기기/보이기 {j}
   축소 {-}
   확대 {=}
 <JourneyMapFullscreenMap>
   ChatPosition(AtCursor) {c}
-  CreateWaypoint(AtCursor) {b}
+  CreateWaypoint(AtCursor) {p}
   DisableFullscreenButtons {h}
   OptionManager {o}
   PanEast(16Blocks) {오른쪽화살표}
@@ -135,7 +135,7 @@
 <LightOverlay>
   광도오버레이켜기/끄기 {f7}
 <장신구>
-  장신구오버레이켜기/끄기 {g}
+  장신구오버레이켜기/끄기 {*}
 
 <쿼크감정표현>
 (많지만적용안함)
