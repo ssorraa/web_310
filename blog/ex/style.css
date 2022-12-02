@@ -2,10 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
 
 /* 전체 */
-*{
+* {
   margin: 0;
   padding: 0;
 }
+
 a {
   text-decoration: none;
 }
@@ -33,9 +34,7 @@ ul {
   background-color: #7cbac1;
 }
 
-.box2>.gmb {
-
-}
+.box2>.gmb {}
 
 .box2>.gmb>ul {
   display: flex;
@@ -50,6 +49,149 @@ ul {
   color: #000;
   font-size: 20px;
 }
+
+/* 박스3,4 */
+.boxA {}
+
+.box3>.category {
+  margin-bottom: 30px;
+}
+.box3>.category>span {
+  background-color:rgb(102, 153, 160);
+  padding: 5px;
+  border-radius: 4px;
+  margin-right: 10px;
+
+  color: #fff;
+}
+
+.box3 h2 {
+  font-size: 34px;
+}
+
+.story {}
+
+.story time {
+  color: #aaa;
+  font-size: 14px;
+  margin-top: 10px;
+  display: block;
+}
+
+.story time i {
+  padding-right: 10px;
+}
+
+.story img {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.story h3 {
+  margin: 30px 0;
+  border-left: solid 10px #7cbac1;
+  padding: 0 10px;
+  font-weight: normal;
+  font-size: 24px;
+}
+.story p {
+  margin-bottom: 20px;
+}
+
+.box3>.share {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.box3>.share>li {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+}
+.box3>.share>li>a {
+  color: #fff;
+  display: block;
+}
+.box3>.share>li>a>i {
+  display: block;
+}
+.box3>.share>li:nth-child(1) {
+  background-color:deepskyblue;
+}
+.box3>.share>li:nth-child(2) {
+  background-color: darkblue;
+}
+.box3>.share>li:nth-child(3) {
+  background-color: crimson;
+}
+
+
+
+.box4 ul {
+  margin-bottom: 30px;
+}
+.box4 h3 {
+  font-weight: normal;
+  border-bottom: dotted 2px #ddd;
+  margin-bottom: 10px;
+}
+.box4 .speci_list a {
+  margin: 10px 0;
+  display: block;
+  color: #555;
+}
+.box4 .speci_list i {
+  padding-right: 10px;
+}
+
+.box4 .recom_list li {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.box4 .recom_list li a {
+  color: #fff;
+}
+
+.box4 .popul_list li {
+  border-bottom: dotted 2px #ddd;
+  margin-bottom: 5px;
+  height: 100%;
+}
+.box4 .popul_list>li>a {
+  display: block;
+  color: steelblue;
+  font-size: 14px;
+}
+.box4 .popul_list span {
+  color: #999;
+  font-size: 12px;
+}
+
+/* 박스5 */
+.box5 {
+  border-top: solid 1px #999;
+}
+.footer {
+
+}
+
+/* 영역설정 */
+.box2 {
+  margin: 10px 0;
+}
+.boxA {
+  padding: 30px 0;
+}
+.box3 {padding-right: 20px;
+  box-sizing: border-box;
+}
+.box4 {padding-left: 20px;
+box-sizing: border-box;}
+.box5 {
+  padding: 20px 0 60px 0;
+}
+
+
 
 /* 테블릿-768이상 */
 @media (min-width: 768px) {
@@ -75,7 +217,9 @@ ul {
 @media (min-width: 1024px) {
 
   .box1,
-  .boxA,.gmb {
+  .boxA,
+  .gmb,
+  .footer {
     width: 1024px;
     margin: 0 auto;
   }
