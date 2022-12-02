@@ -85,10 +85,71 @@ a {
   font-weight: normal;
   font-size: 24px;
 }
+.sidemenu {
+  margin-bottom: 30px;
+}
+.sidemenu h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  border-bottom: dotted 2px #ddd;
+  font-size: 18px;
+  color: #666;
+}
+.sidemenu ul {}
+.sidemenu li {}
+.sidemenu li a {
+  display: block;
+  padding: 5px;
+  font-size: 14px;
+}
+/* 추천기사 */
+.recommend {
+  margin-bottom: 30px;
+}
+.recommend h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  border-bottom: dotted 2px #ddd;
+  font-size: 18px;
+  color: #666;
+}
+.recommend ul {}
+.recommend li {}
+.recommend li a {
+  display: block;
+  padding: 5px;
+  font-size: 14px;
+}
+
+/* 인기기사 */
+.popular {}
+.popular h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  border-bottom: dotted 2px #ddd;
+  font-size: 18px;
+  color: #666;
+}
+.popular ul {}
+.popular li {}
+.popular li a {
+  display: block;
+  padding: 5px;
+  font-size: 14px;
+}
+
+/* 푸터설정 */
+.box5 {
+  border-top: solid 1px #333;
+}
+.copyright {
+  color: #666;
+  font-size: 14px;
+}
 
 /* 박스간격설정 */
 /* 위아래간격 */
-/* 마진간격설정 */
+/* 마진간격설정 
 .box1 {
   margin-top: 8px;
   margin-bottom: 10px;
@@ -107,7 +168,41 @@ a {
 .box5 {
   margin-top: 15px;
   margin-bottom: 15px;
+}*/
+
+/* 패딩간격설정 */
+.box1 {
+  padding-top: 8px;
+  padding-bottom: 10px;
 }
+
+.box3 {
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+
+.box4 {
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+
+.box5 {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+/* .box1 {
+  background-color: blueviolet;
+}
+.box3 {
+  background-color: aqua;
+}
+.box4 {
+  background-color: yellowgreen;
+}
+.box5 {
+  background-color: #333;
+} */
 
 /* 미디어쿼리구간------------------------------------- */
 /* 모바일구간 */
@@ -126,6 +221,15 @@ a {
     float: left;
   }
 
+  /* 박스3-박스4 좌우간격 */
+  .box3 {
+    padding-right: 50px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: bord;
+  }
+
+
   .boxA::after {
     content: "";
     clear: both;
@@ -133,13 +237,16 @@ a {
   }
 }
 
+
+
 /* 웹구간 */
 /* 1280px 이상일때----------------- */
 @media (min-width: 1280px) {
 
   .box1,
   .boxA,
-  .gnb {
+  .gnb,
+  .copyright {
     width: 1190px;
     margin: 0 auto;
   }
