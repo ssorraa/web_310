@@ -9,20 +9,31 @@ a {
   color: cornsilk;
   text-decoration: none;
 }
-#wrap {
-  flex-direction: column;
-}
+
 
 /* 인터페이스 영역설정 */
-
+    .interface {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      right: 5%;
+      width: 15%;
+      font-size: 30px;
+    }
 
 .interface>ul {
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: crimson;
 }
 
 .interface>ul>li {
   display: block;
+  width: 50%;
+  text-align: center;
+  padding: 5px 0;
 }
 
 .interface>ul>li>a {}
@@ -41,9 +52,12 @@ a {
   text-align: center;
 }
 
+
 .menu_btn {}
 
-.menu {}
+.menu {
+  padding: 10px 0;
+}
 
 .menu>ul {
   display: flex;
@@ -51,6 +65,7 @@ a {
   justify-content: space-around;
   align-items: center;
   width: auto;
+  
 }
 
 .menu>ul>li {
@@ -121,24 +136,54 @@ a {
   width: 75%;
 }
 /* 인기검색어 영역설정 */
-.rank_up_section {
+.rank_up_section, .last_text_section, .popular_text_section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.rank_up_section>h2 {
+.rank_up_section>h2, .last_text_section>h2, .popular_text_section>h2 {
   padding: 10px 0;
 }
 .rank_up_list {}
-.rank_up_list>li {
+.rank_up_list>li, .last_text_list>li, .popular_text_list>li {
   padding: 5px 0;
+}
+
+/* 배너 영역설정 */
+.banner_section {}
+.banner_section>.banner_box_1 {}
+.banner_section>.banner_box_2 {}
+
+/* 소셜 영역설정 */
+.social_section {}
+.social_section>ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content:space-around;
+  align-items: center;
+  height: 100%;
+}
+.social_section>ul>li {
+  display: block;
+  background-color: black;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  text-align: center;
+}
+.social_section a {}
+.social_section i {
+  font-size: 40px;
 }
 
 /* 해상도설정########################## */
 /* 모바일-320px */
 @media (max-width:767px) {
-
+  #wrap {
+    flex-direction: column;
+  }
 
   /* 인터페이스 m */
   .interface {
@@ -152,6 +197,10 @@ a {
 
   .interface>ul {
     background-color: brown;
+  }
+  .interface>ul>li {
+    width: 25%;
+    padding: 15px 0;
   }
 
   /* 헤더 m */
@@ -173,20 +222,13 @@ a {
     justify-content: end;
   }
 
-  .menu_btn>a {
-    display: block;
-    padding: 0 10%;
-    text-decoration: none;
-    color: cornsilk;
-  }
-
-  .menu {
-    background-color: darkred;
-    width: 100%;
-    height: 100%;
-    /* 잠시안보이게 */
-    display: none;
-  }
+.menu {
+  background-color: darkred;
+  width: 100%;
+  height: 100%;
+  /* 잠시안보이게 */
+  display: none;
+}
 
   .menu>ul {
     display: flex;
@@ -194,7 +236,15 @@ a {
     align-items: flex-start;
   }
 
+  .menu_btn>a {
+    display: block;
+    padding: 0 10%;
+    text-decoration: none;
+    color: cornsilk;
+  }
 
+.menu {}
+.menu>ul {}
 
   /* 오더설정---------------- */
   .interface {
@@ -239,32 +289,33 @@ a {
 }
 
 /* 테블릿-786px */
-@media (min-width:768px) {
+@media (min-width:768px) and (max-width:1279px) {
+    /* 인터페이스 t */
+    .interface {
+      position:static;
+      z-index: 0;
+      top: 0;
+      right: 0;
+      width: 100%;
+      font-size: 40px;
+    }
 
-  /* 인터페이스 t */
-  .interface {
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    right: 5%;
-    width: 15%;
-    font-size: 30px;
-  }
-
-  .interface>ul {
-    flex-wrap: wrap;
-    background-color: crimson;
-  }
-
-  .interface>ul>li {
-    display: block;
-    width: 50%;
-    text-align: center;
-  }
-
+.interface>ul {
+  background-color: brown;
+  height: 90px;
+  
+}
+.interface>ul>li {
+  width: 25%;
+}
   /* 헤더 t */
   .header {
-    flex-direction: row;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    width: 100%;
   }
 
   .header>h1 {
@@ -272,13 +323,46 @@ a {
   }
 
   .menu {
-    padding-right: 15%;
+    background-color: darkred;
+    position: absolute;
+    top: 106px;
+    width: 50%;
+    height: fit-content;
     display: block;
-  }
-
-  .menu_btn {
+    /* 잠시안보이게 */
     display: none;
   }
+  
+    .menu>ul {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      height: fit-content;
+    }
+    .menu>ul>li {
+      width: 80%;
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+      margin: 5px 10px;
+    }
+
+    .menu>ul>li i {
+      color: cornsilk;
+      font-size: 30px;
+    }
+
+    .menu_btn {
+      width: 80%;
+      background-color: crimson;
+      font-size: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: end;
+    }
+    .menu_btn>a {
+      padding: 20px 50px;
+    }
 
 
 
@@ -329,6 +413,11 @@ a {
   .slider_section {
     height: auto;
   }
+
+  .menu_btn, .menu_sub_btn {
+    display: none;
+  }
+
 
 
   

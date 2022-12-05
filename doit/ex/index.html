@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +9,16 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="reset.css">
   <script src="https://use.fontawesome.com/94a449005c.js"></script>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script>
+        $(document).ready(function () {
+      $('.menu_btn').click(function () {
+        $('.menu').slideToggle()
+      })
+    })
+  </script>
 </head>
+
 <body>
   <div id="wrap">
     <span class="interface">
@@ -17,7 +27,7 @@
         <li><a href="#"><i class="fa fa-calendar-o" aria-hidden="true"></i></a></li>
         <li><a href="#"><i class="fa fa-moon-o" aria-hidden="true"></i></a></li>
         <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
-        
+
       </ul>
     </span>
     <header class="header">
@@ -25,13 +35,12 @@
       <nav class="menu_btn"><a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a></nav>
       <div class="menu">
         <ul>
-          <li><a href="#">메뉴1</a></li>
-          <li><a href="#">메뉴2</a></li>
-          <li><a href="#">메뉴3</a></li>
-          <li><a href="#">메뉴4</a></li>
+          <li><a href="#">메뉴1</a><span class="menu_sub_btn"><i class="fa fa-plus" aria-hidden="true"></i></span></li>
+          <li><a href="#">메뉴2</a><span class="menu_sub_btn"><i class="fa fa-plus" aria-hidden="true"></i></span></li>
+          <li><a href="#">메뉴3</a><span class="menu_sub_btn"><i class="fa fa-plus" aria-hidden="true"></i></span></li>
+          <li><a href="#">메뉴4</a><span class="menu_sub_btn"><i class="fa fa-plus" aria-hidden="true"></i></span></li>
         </ul>
       </div>
-      
     </header>
     <section class="slider_section">
       <span class="prev_btn">이전슬라이드</span>
@@ -42,44 +51,79 @@
         <li class="pic1">
           <figure>
             <img src="https://picsum.photos/800/500" alt="사진1">
-          <figcaption>
-            1사진
-          </figcaption>
+            <figcaption>
+              1사진
+            </figcaption>
           </figure>
         </li>
         <li class="pic2">
           <figure>
-          <img src="https://picsum.photos/800/500" alt="사진2">
-        <figcaption>
-          2사진
-        </figcaption>
-        </figure>
+            <img src="https://picsum.photos/800/500" alt="사진2">
+            <figcaption>
+              2사진
+            </figcaption>
+          </figure>
         </li>
       </ul>
     </section>
     <section class="rank_up_section">
       <h2>인기검색어</h2>
       <ul class="rank_up_list">
-        <li class="rank_up_1">1</li>
-        <li class="rank_up_2">2</li>
-        <li class="rank_up_3">3</li>
-        <li class="rank_up_4">4</li>
-        <li class="rank_up_5">5</li>
-        <li class="rank_up_6">6</li>
-        <li class="rank_up_7">7</li>
-        <li class="rank_up_8">8</li>
-        <li class="rank_up_9">9</li>
-        <li class="rank_up_10">10</li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
       </ul>
     </section>
-    <section class="last_text_section"></section>
-    <section class="popular_text_section"></section>
+    <section class="last_text_section">
+      <h2>최신글</h2>
+      <ul class="last_text_list">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+      </ul>
+    </section>
+    <section class="popular_text_section">
+      <h2>인기글</h2>
+      <ul class="popular_text_list">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+      </ul>
+    </section>
     <section class="banner_section">
       <div class="banner_box_1"></div>
       <div class="banner_box_2"></div>
     </section>
-    <section class="social_section"></section>
+    <section class="social_section">
+      <ul>
+        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+      </ul>
+    </section>
     <footer class="footer"></footer>
   </div>
 </body>
+
 </html>

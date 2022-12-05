@@ -102,6 +102,11 @@ a {
   padding: 5px;
   font-size: 14px;
 }
+.sidemenu li a i {
+  color: #888;
+  margin-right: 5px;
+  font-size: 16px;
+}
 /* 추천기사 */
 .recommend {
   margin-bottom: 30px;
@@ -117,8 +122,29 @@ a {
 .recommend li {}
 .recommend li a {
   display: block;
-  padding: 5px;
+  margin: 20px 5px;
   font-size: 14px;
+  position: relative;
+}
+.recommend li a img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+.recommend li a div {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* 투명도조절,전체투명 */
+  /* opacity: 0.5; */
+  width: 100%;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  color: #fff;
 }
 
 /* 인기기사 */
@@ -132,10 +158,92 @@ a {
 }
 .popular ul {}
 .popular li {}
-.popular li a {
+.popular li a::after {
+  content: "";
+  display: block;
+  clear: both;
+  padding: 5px;
+  border-bottom: dotted 1px #ddd;
+}
+.popular img {
+  float: left;
+  width: 60px;
+}
+.popular .text {
+  float: none;
+  width: auto;
+  margin-left: 70px;
+  font-size: 14px;
+  color: #2288bb;
+}
+.popular span {
+  color: #666;
+  display: block;
+  font-size: 12px;
+}
+/* sns설정 */
+.sns {
+  margin-top: 40px;
+}
+.sns ul {
+  display: flex;
+}
+.sns ul li {
+  flex: 1;
+}
+.sns ul li a {
+  display: block;
+  text-align: center;
+  padding: 10px 0px;
+  color: #fff;
+  font-size: 12px;
+}
+.sns ul li:nth-child(1) {
+  background-color: #1da1f2;
+}
+.sns ul li:nth-child(2) {
+  background-color: #1877f2;
+}
+.sns ul li:nth-child(3) {
+  background: #405de6;
+  background: -moz-linear-gradient(-45deg,  #405de6 1%, #405de6 1%, #833ab4 25%, #e1306c 50%, #f56040 75%, #fcaf45 100%);
+  background: -webkit-linear-gradient(-45deg,  #405de6 1%,#405de6 1%,#833ab4 25%,#e1306c 50%,#f56040 75%,#fcaf45 100%);
+  background: linear-gradient(135deg,  #405de6 1%,#405de6 1%,#833ab4 25%,#e1306c 50%,#f56040 75%,#fcaf45 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#405de6', endColorstr='#fcaf45',GradientType=1 );
+}
+.sns ul li a i {}
+/* 관련기사 설정 */
+.relation {
+  margin-top: 40px;
+  background-color: #f0f0d4;
+  padding: 20px;
+}
+.relation h3 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  color: #727224;
+}
+.relation ul::after {
+content: "";
+clear: both;
+display: block;
+
+}
+.relation ul li {
+  float: left;
+  width: 25%;
+}
+.relation ul li a {
   display: block;
   padding: 5px;
-  font-size: 14px;
+}
+.relation ul li a i {
+  width: 100%;
+}
+.relation .text {
+width: 150px;
+  font-size: 12px;
+  text-align: center;
 }
 
 /* 푸터설정 */
