@@ -9,6 +9,11 @@
   padding: 0;
 }
 
+#wrap {
+  width: 100%;
+  height: auto;
+}
+
 ul {
   list-style: none;
 }
@@ -57,7 +62,7 @@ a {
 .story h2 {
   font-size: 36px;
   margin-bottom: 20px;
-  margin-top 0;
+  margin-top: 0;
 }
 
 .story time {
@@ -85,9 +90,11 @@ a {
   font-weight: normal;
   font-size: 24px;
 }
+
 .sidemenu {
   margin-bottom: 30px;
 }
+
 .sidemenu h3 {
   margin-top: 0;
   margin-bottom: 10px;
@@ -95,22 +102,28 @@ a {
   font-size: 18px;
   color: #666;
 }
+
 .sidemenu ul {}
+
 .sidemenu li {}
+
 .sidemenu li a {
   display: block;
   padding: 5px;
   font-size: 14px;
 }
+
 .sidemenu li a i {
   color: #888;
   margin-right: 5px;
   font-size: 16px;
 }
+
 /* 추천기사 */
 .recommend {
   margin-bottom: 30px;
 }
+
 .recommend h3 {
   margin-top: 0;
   margin-bottom: 10px;
@@ -118,19 +131,24 @@ a {
   font-size: 18px;
   color: #666;
 }
+
 .recommend ul {}
+
 .recommend li {}
+
 .recommend li a {
   display: block;
   margin: 20px 5px;
   font-size: 14px;
   position: relative;
 }
+
 .recommend li a img {
   width: 100%;
   height: auto;
   vertical-align: bottom;
 }
+
 .recommend li a div {
   position: absolute;
   left: 0;
@@ -141,7 +159,6 @@ a {
   width: 100%;
   padding: 5px 10px;
   box-sizing: border-box;
-  
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   color: #fff;
@@ -149,6 +166,7 @@ a {
 
 /* 인기기사 */
 .popular {}
+
 .popular h3 {
   margin-top: 0;
   margin-bottom: 10px;
@@ -156,8 +174,11 @@ a {
   font-size: 18px;
   color: #666;
 }
+
 .popular ul {}
+
 .popular li {}
+
 .popular li a::after {
   content: "";
   display: block;
@@ -165,10 +186,12 @@ a {
   padding: 5px;
   border-bottom: dotted 1px #ddd;
 }
+
 .popular img {
   float: left;
   width: 60px;
 }
+
 .popular .text {
   float: none;
   width: auto;
@@ -176,21 +199,26 @@ a {
   font-size: 14px;
   color: #2288bb;
 }
+
 .popular span {
   color: #666;
   display: block;
   font-size: 12px;
 }
+
 /* sns설정 */
 .sns {
   margin-top: 40px;
 }
+
 .sns ul {
   display: flex;
 }
+
 .sns ul li {
   flex: 1;
 }
+
 .sns ul li a {
   display: block;
   text-align: center;
@@ -198,50 +226,61 @@ a {
   color: #fff;
   font-size: 12px;
 }
+
 .sns ul li:nth-child(1) {
   background-color: #1da1f2;
 }
+
 .sns ul li:nth-child(2) {
   background-color: #1877f2;
 }
+
 .sns ul li:nth-child(3) {
   background: #405de6;
-  background: -moz-linear-gradient(-45deg,  #405de6 1%, #405de6 1%, #833ab4 25%, #e1306c 50%, #f56040 75%, #fcaf45 100%);
-  background: -webkit-linear-gradient(-45deg,  #405de6 1%,#405de6 1%,#833ab4 25%,#e1306c 50%,#f56040 75%,#fcaf45 100%);
-  background: linear-gradient(135deg,  #405de6 1%,#405de6 1%,#833ab4 25%,#e1306c 50%,#f56040 75%,#fcaf45 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#405de6', endColorstr='#fcaf45',GradientType=1 );
+  background: -moz-linear-gradient(-45deg, #405de6 1%, #405de6 1%, #833ab4 25%, #e1306c 50%, #f56040 75%, #fcaf45 100%);
+  background: -webkit-linear-gradient(-45deg, #405de6 1%, #405de6 1%, #833ab4 25%, #e1306c 50%, #f56040 75%, #fcaf45 100%);
+  background: linear-gradient(135deg, #405de6 1%, #405de6 1%, #833ab4 25%, #e1306c 50%, #f56040 75%, #fcaf45 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#405de6', endColorstr='#fcaf45', GradientType=1);
 }
+
 .sns ul li a i {}
+
 /* 관련기사 설정 */
 .relation {
   margin-top: 40px;
   background-color: #f0f0d4;
   padding: 20px;
 }
+
 .relation h3 {
   margin-top: 0;
   margin-bottom: 5px;
   color: #727224;
 }
+
 .relation ul::after {
-content: "";
-clear: both;
-display: block;
+  content: "";
+  clear: both;
+  display: block;
 
 }
+
 .relation ul li {
   float: left;
   width: 25%;
 }
+
 .relation ul li a {
   display: block;
   padding: 5px;
 }
+
 .relation ul li a i {
   width: 100%;
 }
+
 .relation .text {
-width: 150px;
+  width: 150px;
   font-size: 12px;
   text-align: center;
 }
@@ -250,6 +289,7 @@ width: 150px;
 .box5 {
   border-top: solid 1px #333;
 }
+
 .copyright {
   color: #666;
   font-size: 14px;
@@ -311,9 +351,49 @@ width: 150px;
 .box5 {
   background-color: #333;
 } */
+/* 좌우간격 */
+.box1, .box2, .boxA, .box5 {
+  padding: 0 5%;
+}
 
 /* 미디어쿼리구간------------------------------------- */
-/* 모바일구간 */
+/* 모바일구간small */
+/* 599px이하일때 ----------------- */
+@media (max-width:599px) {
+  /* 관련기사 */
+  .relation ul li {
+    width: 50%;
+  }
+  /* sns설정 */
+  .sns span {
+    display: none;
+  }
+  .relation ul li:nth-child(odd) {
+    clear: both;
+    /* odd-홀수/enen-짝수 */
+  }
+
+}
+
+/* 모바일구간big */
+/* 600px이상,767px이하일때--------- */
+@media (min-width:600px) and (max-width:767px) {
+  /* 박스4-1,4-2가로정렬 */
+  .box4::after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+  .box4-1 {
+    float: left;
+    width: 49%;
+  }
+  .box4-2 {
+    float: right;
+    width: 49%;
+  }
+}
+
 /* 태블릿구간 */
 /* 768px 이상일떄 ---------------- */
 @media (min-width: 768px) {

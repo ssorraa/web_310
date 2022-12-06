@@ -70,6 +70,7 @@ img {
   line-height: 1.3;
   text-align: center;
   background-color: #2ecc71;
+  z-index: 45;
 }
 
 .header>h1>a {
@@ -106,6 +107,7 @@ img {
   justify-content: space-between;
   width: 50%;
   height: auto;
+  z-index: 40;
 }
 
 .slider_section>span {
@@ -171,6 +173,7 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
 }
 
 .rankup_section>.title {
@@ -409,6 +412,304 @@ img {
     /* margin: 0 5% 0 5%; */
     /* 화면 중앙 배치 */
   }
+  /* 인포섹션설정 */
+  .info_section {
+    position: relative;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 50;
+    background-color: #2ecc71;
+  }
+
+  .info_list {
+    display: flex;
+  }
+
+  .info_list>li {
+    width: 25%;
+  }
+
+  .info_list>li>a {
+    display: block;
+    padding: 15px;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  /* 헤더영역 */
+
+  .header {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .header>h1 {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 20px;
+    font-size: 21px;
+    line-height: 1.3;
+    text-align: center;
+    background-color: #2ecc71;
+    z-index: 45;
+  }
+
+  .header>h1>a {
+    display: block;
+    padding: 30px 0;
+    color: #fff;
+  }
+
+  .header>nav {
+    width: 85%;
+    background-color: #2ecc71;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 0;
+    right: 0;
+  }
+
+  .gnb {
+    /* 토글버튼 클릭시 보여야함 */
+    display: none;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    z-index: 46;
+    top: 80px;
+    right: -60%;
+    width: 100%;
+  }
+
+  .gnb>li {
+    width: 40%;
+    background-color: #2c3e50;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .gnb>li>a {
+    display: block;
+    font-size: 20px;
+    padding: 20px 20px;
+  }
+
+  /* 토글버튼 */
+  .sub_menu_toggle_btn {
+    display: block;
+    text-indent: -10000px;
+    background-image: url(../img/sub_menu_toggle_btn.png);
+    width: 20px;
+    height: 20px;
+    margin: 20px 20px;
+    background-size: contain;
+  }
+
+  .menu_toggle_btn {
+    display: block;
+    position: absolute;
+    z-index: 60;
+    top: 75px;
+    right: 50px;
+    background-image: url(../img/menu_toggle_btn.png);
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    text-indent: -10000px;
+  }
+
+  /* 슬라이더영역 */
+  .slider_section {
+    width: 100%;
+    height: 440px;
+  }
+
+  /* 갤러리영역 */
+  .gallery_section {
+    width: 100%;
+  }
+
+  .gallery_list {
+    flex-direction: row;
+  }
+
+  .gallery_list>li {
+    width: 50%;
+    height: auto;
+    padding: 10px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  }
+
+  /* 인기검색어영역 */
+  .rankup_section {
+    width: 100%;
+    height: 270px;
+  }
+
+  /* 최신글영역 */
+  .latest_post_section {
+    width: 100%;
+    height: 270px;
+  }
+
+  /* 인기글영역 */
+  .popular_post_section {
+    width: 100%;
+    height: 270px;
+  }
+
+  /* 배너영역 */
+  .banner_section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+
+  .banner_section>div {
+    flex: 1;
+  }
+
+  .banner_section .banner_box_1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .banner_box_1 {}
+
+  .banner_box_2 {}
+
+
+
+  .banner_box_1 a {
+    display: block;
+    width: 100px;
+    padding: 20px 0;
+  }
+
+  .banner_box_1 a svg {
+    width: 100%;
+    height: auto;
+    fill: whitesmoke;
+  }
+
+  .banner_section .banner_box_2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+
+  .banner_box_2 .banner_list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    
+  }
+
+  .banner_list li {}
+
+  .banner_list li a {
+    display: block;
+    width: 42px;
+    padding: 20px 10px;
+  }
+
+  .banner_list li a svg {
+    width: 100%;
+    height: auto;
+    fill: whitesmoke;
+  }
+
+  /* 소셜 영역 */
+    .social_section {
+      width: 100%;
+    }
+  .social_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .social_section .social_list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+
+  .social_list li {
+    margin: 0;
+    padding: 20px 0;
+  }
+
+  .social_list li a {
+    display: block;
+    text-align: center;
+    line-height: 55px;
+    /* display: flex;
+  justify-content: center;
+  align-items: center; */
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+  }
+
+  .footer {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  }
+
+  /* 오더설정---------------- */
+  .interface {
+    order: 0;
+  }
+
+  .header {
+    order: 1;
+  }
+
+  .slider_section {
+    order: 2;
+  }
+
+  .gallery_section {
+    order: 5;
+  }
+
+  .rankup_section {
+    order: 6;
+  }
+
+  .latest_post_section {
+    order: 3;
+  }
+
+  .popular_post_section {
+    order: 4;
+  }
+
+  .banner_section {
+    order: 7;
+  }
+
+  .social_section {
+    order: 8;
+  }
+
+  .footer {
+    order: 9;
+  }
 }
 
 /* 테블릿구간 768px이상 1139px이하 */
@@ -480,9 +781,9 @@ img {
     flex-direction: column;
     align-items: flex-end;
     position: absolute;
-    z-index: 10;
+    z-index: 46;
     top: 80px;
-    right:-60%;
+    right: -60%;
     width: 100%;
   }
 
@@ -522,6 +823,58 @@ img {
     height: 30px;
     background-repeat: no-repeat;
     text-indent: -10000px;
+  }
+
+  /* 슬라이더영역 */
+  .slider_section {
+    width: 60%;
+    height: 440px;
+  }
+
+  /* 갤러리영역 */
+  .gallery_section {
+    width: 70%;
+  }
+
+  .gallery_list {
+    flex-direction: row;
+  }
+
+  /* 인기검색어영역 */
+  .rankup_section {
+    width: 40%;
+  }
+
+  /* 최신글영역 */
+  .latest_post_section {
+    width: 40%;
+    height: 270px;
+  }
+
+  /* 인기글영역 */
+  .popular_post_section {
+    width: 40%;
+    height: 270px;
+  }
+
+  /* 배너영역 */
+  .banner_section {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .banner_section>div {
+    flex: 1;
+  }
+
+  .banner_box_1 {}
+
+  .banner_box_2 {}
+
+  /* 소셜영역 */
+  .social_section {
+    width: 20%;
   }
 
 
@@ -575,12 +928,20 @@ img {
 }
 
 
-/* 웹구간 1280px */
+/* 웹구간 1140px */
 @media (min-width: 1140px) {
 
   /* 토글버튼 */
   .menu_toggle_btn,
   .sub_menu_toggle_btn {
     display: none;
+  }
+
+  .gnb {
+    display: flex !important;
+  }
+
+  #wrap {
+    max-width: 1200px;
   }
 }

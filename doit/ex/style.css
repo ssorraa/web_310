@@ -18,7 +18,7 @@ justify-content: end;
 position: relative;
 }
 .header>h1 {
-  width: 20%;
+  width: 15%;
   background-color: crimson;
   height: 150px;
   position: absolute;
@@ -47,7 +47,7 @@ width: 25%;
   width: 30%;
 }
 .popular_text_section {
-  background-color: lightgreen;
+  background-color:mediumseagreen;
   width: 30%;
 }
 .banner_section {
@@ -59,13 +59,13 @@ width: 25%;
   flex: 1;
 }
 .banner_box_1 {
-  background-color: mediumseagreen;
-}
-.banner_box_2 {
   background-color: mediumturquoise;
 }
-.social_section {
+.banner_box_2 {
   background-color: cornflowerblue;
+}
+.social_section {
+  background-color: slateblue;
   width: 17%;
 }
 .footer {

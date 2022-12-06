@@ -111,6 +111,7 @@ ul {
   flex: 1;
   padding: 10px;
   text-align: center;
+
 }
 
 .box3>.story>.share>li>a {
@@ -134,13 +135,37 @@ ul {
   background-color: crimson;
 }
 
-.box3 .relat {}
-.box3 .relat h3 {}
-.box3 .relat ul {}
-.box3 .relat ul li {}
+.box3 .relat {
+  background-color: wheat;
+  margin: 30px 0;
+  padding: 10px;
+}
+
+.box3 .relat h3 {
+  font-weight: normal;
+  margin: 0 0 10px 1%;
+  font-size: 24px;
+}
+
+.box3 .relat ul::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.box3 .relat ul li {
+  width: 23%;
+  float: left;
+  padding: 0 1%;
+}
+
 .box3 .relat ul li a {}
+
 .box3 .relat ul li img {}
-.box3 .relat ul li span {}
+
+.box3 .relat ul li span {
+  display: block;
+}
 
 /* box4 */
 
@@ -194,7 +219,7 @@ ul {
   margin: 10px 0;
   height: 100%;
   position: relative;
-  padding: 5px 0;
+  padding: 10px 0;
 }
 
 .box4 .popul_list>li>a::after {
@@ -210,12 +235,13 @@ ul {
   font-size: 12px;
   float: none;
   display: block;
+  margin-left: 70px;
 }
 
 .box4 .popul_list>li>a:nth-child(2)>span {
   position: absolute;
-  bottom: 5px;
-  left: 60px;
+  bottom: 30px;
+  left: 0;
 }
 
 .box4 .popul_list img {
@@ -244,54 +270,107 @@ ul {
   padding: 30px 0;
 }
 
-.box3 {
-  padding-right: 20px;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-}
-
-.box4 {
-  padding-left: 20px;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-}
-
 .box5 {
   padding: 20px 0 60px 0;
 }
+/* 모바일-400이하 */
+@media (max-width:400px) {
+  .box1, .box2, .boxA, .box5{
+  width: 400px;
+  }
+}
+/* 모바일-550이하 */
+@media (max-width: 550px) {
+  .box3 .share span {
+    display: none;
+  }
+}
 
-
-
-/* 테블릿-768이상 */
-@media (min-width: 768px) {
-  .box3 {
-    width: 70%;
-    float: left;
+/* 모바일-767이하 */
+@media (max-width: 767px) {
+  .box3 .relat ul li {
+    width: 50%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
   }
 
-  .box4 {
-    width: 30%;
-    float: left;
+  .box3 .relat ul li:nth-child(odd) {
+    clear: both;
   }
 
+  .box3 .relat ul li img {
+    width: 90%;
+  }
+
+  .box3 .relat ul li span {
+    width: 90%;
+  }
+  .box4 .recom_list li {
+    margin: 25px 0;
+  }
+  .box1, .box2, .boxA, .box5 {
+    padding: 0 5%;
+  }
+}
+
+/* 테블릿-768이상 1023이하 */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .box1, .box2, .boxA, .box5 {
+    padding: 0 5%;
+  }
   .boxA::after {
     content: "";
     display: block;
     clear: both;
   }
-}
 
+  .box3 .relat ul li img {
+    width: 90%;
+  }
+
+  .box3 .relat ul li span {
+    width: 90%;
+  }
+
+  .box4-1 {
+    float: left;
+    width: 49%;
+  }
+
+  .box4-2 {
+    float: right;
+    width: 49%;
+  }
+}
 
 /* 웹-1024이상 */
 @media (min-width: 1024px) {
+  .boxA::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  .box3 {
+    width: 69%;
+    float: left;
+  }
+
+  .box4 {
+    width: 29%;
+    float: right;
+  }
 
   .box1,
   .boxA,
   .gmb,
   .footer {
-    width: 1024px;
+    width: 1000px;
     margin: 0 auto;
+  }
+  .box4 .popul_list li {
+    margin: 20px 0;
+    padding: 10px 0;
   }
 }
