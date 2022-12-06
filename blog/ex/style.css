@@ -159,7 +159,9 @@ ul {
   padding: 0 1%;
 }
 
-.box3 .relat ul li a {}
+.box3 .relat ul li a {
+  color: #000;
+}
 
 .box3 .relat ul li img {}
 
