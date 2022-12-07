@@ -269,6 +269,12 @@ display: block;
   font-size: 40px;
 }
 
+/* 푸터설정 */
+.footer {
+  line-height: 100px;
+  text-indent: 50px;
+}
+
 /* 해상도설정########################## */
 /* 모바일-320px */
 @media (max-width:767px) {
@@ -330,7 +336,7 @@ display: block;
   .menu {
     background-color: darkred;
     position: absolute;
-    top: 220px;
+    top: 230px;
     width: 100%;
     height: fit-content;
     /* 잠시안보이게 */
@@ -455,7 +461,7 @@ display: block;
 
   /* 인터페이스 t */
   .interface {
-    position: static;
+    position: relative;
     z-index: 0;
     top: 0;
     right: 0;
@@ -476,20 +482,26 @@ display: block;
 
   /* 헤더 t */
   .header {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: flex-start;
-    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
   .header>h1 {
-    position: absolute;
-    top: 90px;
-    height: 173px;
-    width: 20%;
+    position: relative;
+    width: 30%;
+    height: 66%;
   }
+
+  .menu_btn {
+    width: 70%;
+    background-color: crimson;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    height: 66%;
+  }
+
 
   .menu {
     background-color: darkred;
@@ -526,15 +538,6 @@ display: block;
   .menu>ul>li i {
     color: cornsilk;
     font-size: 30px;
-  }
-
-  .menu_btn {
-    width: 80%;
-    background-color: crimson;
-    font-size: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: end;
   }
 
   .menu_btn>a {

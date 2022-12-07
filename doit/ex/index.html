@@ -13,7 +13,7 @@
   <script src="http://code.jquery.com/jquery-latest.js"></script>
   <script>
     $(document).ready(function () {
-      $('.menu_btn').click(function () {
+      $('.menu_btn>a').click(function () {
         $('.menu').slideToggle()
       })
     })
@@ -35,10 +35,10 @@
       <nav class="menu_btn"><a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a></nav>
       <div class="menu">
         <ul>
-          <li><a href="#">메뉴1</a><span class="menu_sub_btn"><i class="fa fa-plus" aria-hidden="true"></i></span></li>
-          <li><a href="#">메뉴2</a><span class="menu_sub_btn"><i class="fa fa-plus" aria-hidden="true"></i></span></li>
-          <li><a href="#">메뉴3</a><span class="menu_sub_btn"><i class="fa fa-plus" aria-hidden="true"></i></span></li>
-          <li><a href="#">메뉴4</a><span class="menu_sub_btn"><i class="fa fa-plus" aria-hidden="true"></i></span></li>
+          <li><a href="#">수업자료</a><span class="menu_sub_btn"><i class="fa fa-plus" aria-hidden="true"></i></span></li>
+          <li><a href="#">프로젝트 1</a><span class="menu_sub_btn"><i class="fa fa-plus" aria-hidden="true"></i></span></li>
+          <li><a href="#">프로젝트 2</a><span class="menu_sub_btn"><i class="fa fa-plus" aria-hidden="true"></i></span></li>
+          <li><a href="#">프로젝트 3</a><span class="menu_sub_btn"><i class="fa fa-plus" aria-hidden="true"></i></span></li>
         </ul>
       </div>
     </header>
@@ -50,17 +50,17 @@
       <ul class="gallery_list">
         <li class="pic1">
           <figure>
-            <img src="https://picsum.photos/800/500" alt="사진1">
+            <img src="../img/최소라_인포메이션아키텍쳐_v001.jpg" alt="인포메이션_아키텍쳐_예시">
             <figcaption>
-              1사진
+              인포메이션 아키텍쳐 예시본
             </figcaption>
           </figure>
         </li>
         <li class="pic2">
           <figure>
-            <img src="https://picsum.photos/800/500" alt="사진2">
+            <img src="../img/한국동물보호협회-리뉴얼-플로우-차트.jpg" alt="리뉴얼_플로우차트">
             <figcaption>
-              2사진
+              리뉴얼_플로우차트 예시본
             </figcaption>
           </figure>
         </li>
@@ -154,7 +154,9 @@
         <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
       </ul>
     </section>
-    <footer class="footer"></footer>
+    <footer class="footer">
+      Copyright © 2022. SORACHOI All Rights Reserved.
+    </footer>
   </div>
 </body>
 

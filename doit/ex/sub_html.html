@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>나의소개</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="sub_html.css">
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <script src="https://use.fontawesome.com/94a449005c.js"></script>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.menu_btn>a').click(function () {
+        $('.menu').slideToggle()
+      })
+    })
+  </script>
+</head>
+
+<body>
+  <div id="wrap">
+    <header class="header">
+      <span class="interface">
+        <ul>
+          <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-calendar-o" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-moon-o" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+        </ul>
+      </span>
+      <h1><a href="#">나의소개 HTML</a></h1>
+      <nav class="menu_btn"><a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a></nav>
+      <div class="menu">
+        <ul>
+          <li><a href="#">수업자료</a><span class="menu_sub_btn"><i class="fa fa-plus" aria-hidden="true"></i></span></li>
+          <li><a href="#">프로젝트1</a><span class="menu_sub_btn"><i class="fa fa-plus" aria-hidden="true"></i></span></li>
+          <li><a href="#">프로젝트2</a><span class="menu_sub_btn"><i class="fa fa-plus" aria-hidden="true"></i></span></li>
+          <li><a href="#">프로젝트3</a><span class="menu_sub_btn"><i class="fa fa-plus" aria-hidden="true"></i></span></li>
+        </ul>
+      </div>
+    </header>
+    <section class="sub_html">
+      <p>
+        <span>HTML이란?</span><br>
+        Hyper Text Markup Language의 약자로<br>
+        웹페이지를 읽을 수 있게 만들어주는 <span>언어</span>이다
+      </p>
+      <ul>
+        <li><a href="글자태그001.html"><img src="https://picsum.photos/300?random=1" alt=""><span>제목태그와 글자태그</span></a></li>
+        <li><a href="글자태그002.html"><img src="https://picsum.photos/300?random=2" alt=""><span>텍스트태그</span></a></li>
+        <li><a href="공간태그001.html"><img src="https://picsum.photos/300?random=3" alt=""><span>div태그/span태그</span></a></li>
+        <li><a href="이미지와링크태그.html"><img src="https://picsum.photos/300?random=4" alt=""><span>img태그/a태그</span></a></li>
+        <li><a href="목록태그001.html"><img src="https://picsum.photos/300?random=5" alt=""><span>ol태그/ul태그</span></a></li>
+        <li><a href="테이블태그001.html"><img src="https://picsum.photos/300?random=6" alt=""><span>table태그/tr태그/td태그</span></a></li>
+        <!-- 추후 내용이 추가될 때마다 삽입 -->
+        <li><a href="시맨틱태그001.html"><img src="https://picsum.photos/300?random=7" alt=""><span>시맨틱태그의 종류</span></a></li>
+        <li><a href="입력양식태그001.html"><img src="https://picsum.photos/300?random=8" alt=""><span>form태그</span></a></li>
+      </ul>
+    </section>
+    <footer class="footer">
+      Copyright © 2022. SORACHOI All Rights Reserved.
+    </footer>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+@charset "utf-8";
+
+
+.sub_html {
+  order: 2;
+  background-color: orangered;
+  width: 100%;
+
+}
+.sub_html>p {
+  text-align: center;
+  font-size: 22px;
+  width: 100%;
+  margin: 20px 0;
+}
+.sub_html>p>span:nth-child(1) {
+  display: inline-block;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  background-color: rgba(255, 255, 0, 0.3);
+  margin: 5px 0;
+  padding: 5px;
+}
+.sub_html>p>span:nth-child(4) {
+  font-size: 22px;
+  background-color: rgba(255, 255, 0, 0.3);
+  }
+.sub_html ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px;
+  border-top: dotted 2px rgba(255, 255, 0, 0.3);
+}
+.sub_html li {
+  padding: 20px;
+}
+.sub_html li a {
+  
+  display: block;
+  background-color: rgba(255, 255, 0, 0);
+  padding: 20px;
+  border-radius: 10px;
+  font-weight: 400;
+  transition: background-color 0.3s;
+  transition-timing-function: ease-out;
+}
+.sub_html li a:hover {
+  background-color: rgba(255, 255, 0, 0.3);
+  font-weight: 600;
+  
+}
+
+.sub_html li span {
+  line-height: 20px;
+  display: block;
+  font-size: 20px;
+  padding: 20px 0 0px 0;
+  transition: padding 0.3s, font-size 0.3s;
+}
+.sub_html li a:hover span {
+  padding: 5px 0 10px 0;
+  font-size: 25px;
+}
+.sub_html li img {
+  width: 300px;
+  height: auto;
+}
+/* 웹페이지-1280px */
+@media (min-width:1280px) {
+
+  .sub_html>p {
+  margin: 20px 25%;
+  width: 50%;
+  }
+}
