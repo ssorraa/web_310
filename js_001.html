@@ -1,18 +1,50 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>자바스크립트란?</title>
 </head>
+
 <body>
   <h1>자바스크립트란?</h1>
   <p>
-    다양한 객체들로 구성되어 있고, 메서드를 통해 제어하는 객채기반언어
+    다양한 객체들로 구성되어 있고, 메서드를 통해 제어하는 객채기반언어<br>
+    메서드:명령어
   </p>
   <script>
-    
+    document.write('재미있는자바스크립트') //화면 출력 메서드
+    console.log('어려운자바스크립트')
   </script>
+  <p>
+    객체와 메서드의 의미
+  </p>
+  <p>
+    스마트폰,전화해라(매개변수) → 스마트폰: 객체, 전화해라: 메서드 (매개변수): 정보
+  </p>
+  <h3>주요단어</h3>
+  <ul>
+    <li>변수: 변화하는 값 / 선언문을 통해 제어된다 var.let.const
+      <br>const는 고정변수이기때문에 한번 입력하면 바꿀 수 없다
+    </li>
+    <li>함수: 계산식을 만듦 function(){ 계산식 }</li>
+    <li>조건문: if문: 만일 ~~~한다면 ~~~이여라 if,else,else if<br>
+      else문: 만일~~~아니라면 ~~~이여라<br>
+      else if문: 만일 ~~~아닐 때 ~~~한다면 ~~~이여라<br>
+      if(money>3000){console.log('김밥을산다')}<br>
+        else if(money>1000){console.log('삼각김밥을산다')}<br>
+          else{console.log('굶는다')}<br>
+      (돈이 3000원보다 많으면 김밥을 먹을것이고, 아니라면 굶을것이다)<br>
+    </li>
+    <li>반복문 - 구구단처럼 일정한 공식을 반복 출력  for.while<br>
+      for(let i = 0; i<9; i++){
+        console.log(i)} <br>
+        (i를 0부터 9미만까지 반복해서 콘솔 로그에 출력해라)
+    </li>
+  </ul>
+
 </body>
+
 </html>
