@@ -261,7 +261,9 @@ ul {
   border-top: solid 1px #999;
 }
 
-.footer {}
+.footer {
+  padding: 15px 0 30px 0;
+}
 
 /* 영역설정 */
 .box2 {
@@ -314,6 +316,9 @@ ul {
   .box1, .box2, .boxA, .box5 {
     padding: 0 5%;
   }
+  .box4 .popul_list li:nth-child(6) {
+    border-bottom: dotted 0px #ddd;
+  }
 }
 
 /* 테블릿-768이상 1023이하 */
@@ -344,7 +349,11 @@ ul {
     float: right;
     width: 49%;
   }
+  .box4 .popul_list li:nth-child(6) {
+    border-bottom: dotted 0px #ddd;
+  }
 }
+
 
 /* 웹-1024이상 */
 @media (min-width: 1024px) {
