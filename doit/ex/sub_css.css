@@ -3,7 +3,7 @@
 
 .sub_html {
   order: 2;
-  background-color: orangered;
+  background-color: cornflowerblue;
   width: 100%;
 
 }
@@ -18,21 +18,21 @@
   text-align: center;
   font-size: 30px;
   font-weight: bold;
-  background-color: rgba(255, 255, 0, 0.3);
+  background-color: rgba(0, 50, 255, 0.3);
   margin: 5px 0;
   padding: 5px;
 }
 .sub_html>p>span:nth-child(4) {
   font-size: 22px;
   color: white;
-  background-color: rgba(255, 255, 0, 0.3);
+  background-color: rgba(0, 50, 255, 0.3);
   }
 .sub_html ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   margin: 20px;
-  border-top: dotted 2px rgba(255, 255, 0, 0.3);
+  border-top: dotted 2px rgba(0, 50, 255, 0.3);
 }
 .sub_html li {
   padding: 20px;
@@ -48,7 +48,7 @@
   transition-timing-function: ease-out;
 }
 .sub_html li a:hover {
-  background-color: rgba(255, 255, 0, 0.3);
+  background-color: rgba(0, 50, 255, 0.3);
   font-weight: 600;
   
 }

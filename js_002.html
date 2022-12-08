@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자바스크립트_연산자</title>
+</head>
+
+<body>
+  <h1>연산자란?</h1>
+  <p>
+    변수로 만들어둔 대상이 되는 데이터로<br>
+    산술연산자, 비교연산자, 대입연산자, 증감연산자 등이 있다
+  </p>
+  <div>
+    <h2>산술연산자</h2>
+    <ul>
+      <li> + : 더하기</li>
+      <li> - : 빼기</li>
+      <li> * : 곱하기</li>
+      <li> / : 나누기</li>
+      <li> % : 나머지</li>
+    </ul>
+    <div>
+      예제는 콘솔박스에서 확인 가능
+    </div>
+  </div>
+  <script>
+    console.log('산술연산자예제')
+    // 변수설정
+    let a = 10;
+    let b = 5;
+    console.log(a);
+    console.log(b);
+    let result;
+    // 더하기 연산자
+    result = a + b;
+    console.log(result);
+    // 빼기 연산자
+    result = a - b;
+    console.log(result);
+    // 곱하기 연산자
+    result = a * b;
+    console.log(result);
+    // 나누기 연산자
+    result = a / b;
+    console.log(result);
+    // 나머지 연산자
+    result = a % b;
+    console.log(result);
+  </script>
+  <div>
+    <h2>
+      비교연산자
+    </h2>
+    <ul>
+      <li>a > b: a보다 b가 작다</li>
+      <li>a < b: a보다b가 크다</li>
+      <li>a >= b: a보다 b가 작거나 같다</li>
+      <li>a <= b: a보다 b가 크거나 같다</li>
+      <li>a == b: a와 b는 같다</li>
+      <li>a != b: a와 b는 다르다</li>
+    </ul>
+    <div>
+      예제는 콘솔박스에서 확인 가능
+    </div>
+    <script>
+      console.log('비교연산자예제')
+      // 비교연산자
+      result = a > b;
+      console.log(result);
+      result = a < b;
+      console.log(result);
+      result = a >= b;
+      console.log(result);
+      result = a <= b;
+      console.log(result);
+      result = a == b;
+      console.log(result);
+      result = a != b;
+      console.log(result);
+    </script>
+  </div>
+  <div>
+    <h2>대입연산자</h2>
+    <ul>
+      <li> += : 더해서 대입해라
+        <br>a += b → a = a + b
+      </li>
+      <li> -= : 빼서 대입해라
+        <br>a -= b → a = a - b
+      </li>
+      <li> *= : 곱해서 대입해라
+        <br>a *= b → a = a * b
+      </li>
+      <li> /= : 나누서 대입해라
+        <br>a /= b → a = a / b
+      </li>
+      <li> %= : 나머지를 대입해라
+        <br>a %= b → a = a % b
+      </li>
+    </ul>
+    <div>
+      예제는 콘솔박스에서 확인 가능
+    </div>
+    <script>
+      console.log('대입연산자예제')
+      a += b;
+      console.log(a);
+      a -= b;
+      console.log(a);
+      b *= 2;
+      console.log(b);
+      b /= 3;
+      console.log(b);
+      b %= 3;
+      console.log(b);
+    </script>
+  </div>
+  <div>
+    <h2>증감연산자</h2>
+    <div>
+      <ul>
+        <li> ++ : 1씩 더하기</li>
+        <li> -- : 1씩 빼기</li>
+      </ul>
+    </div>
+    <div>
+      예제는 콘솔박스에서 확인 가능
+    </div>
+    <script>
+      console.log('증감연산자예제')
+      a ++;
+      console.log(a);
+      a ++;
+      console.log(a);
+      a ++;
+      console.log(a);
+      a --;
+      console.log(a);
+      b --;
+      console.log(b);
+    </script>
+  </div>
+</body>
+
+</html>
