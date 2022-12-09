@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="190" viewBox="0 0 1000 190">
+  <defs>
+    <clipPath id="clip-header">
+      <rect width="1000" height="190"/>
+    </clipPath>
+  </defs>
+  <g id="header" clip-path="url(#clip-header)">
+    <ellipse id="Ellipse_10" data-name="Ellipse 10" cx="500" cy="121.265" rx="500" ry="121.265" transform="translate(0 71.213)" fill="#fff"/>
+    <g id="Group_6" data-name="Group 6" transform="translate(386 -24)">
+      <circle id="Ellipse_11" data-name="Ellipse 11" cx="101" cy="101" r="101" transform="translate(13.792 25.213)" fill="#fff"/>
+      <path id="Polygon_1" data-name="Polygon 1" d="M22.368,14.758a10,10,0,0,1,17.264,0L53.2,37.951A10,10,0,0,1,44.566,53H17.434A10,10,0,0,1,8.8,37.951Z" transform="translate(178.63 0) rotate(38)" fill="#fff"/>
+      <path id="Polygon_2" data-name="Polygon 2" d="M22.368,14.758a10,10,0,0,1,17.264,0L53.2,37.951A10,10,0,0,1,44.566,53H17.434A10,10,0,0,1,8.8,37.951Z" transform="matrix(0.788, -0.616, 0.616, 0.788, 0, 38.171)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

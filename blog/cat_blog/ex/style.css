@@ -1,0 +1,96 @@
+@charset 'utf-8';
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 90%;
+  margin: 0 5%;
+  background: linear-gradient(to right, #ebf7f2 50%,#bbdfd1 50%,#bbdfd1 100%);
+  background-size: 30px;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+ul {
+  list-style: none;
+}
+
+
+header {
+  background-image: url(../img/header.svg);
+  height: 190px;
+  background-size: cover;
+  background-position: center top;
+  margin-top: 40px;
+}
+.header .logo {
+  font-size: 60px;
+  text-align: center;
+  font-family: 'Amatic SC', cursive;
+  padding-top: 30px;
+  font-weight: normal;
+}
+.header a {
+  color: #949087;
+}
+.header>p {
+  color: #949087;
+  text-align: center;
+  font-size: 18px;
+  margin: 20px 0;
+}
+.container {}
+.container .main_section {
+  float: left;
+  width: 68%;
+}
+.main_section .post_home {}
+.post_home::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+.post_home .post_title {}
+.post_title h2 {}
+.post_title h2 a {}
+.post_img {
+  float: left;
+}
+.post_img .date {}
+.post_img .date span {}
+.post_img img {
+  width: 40%;
+  height: auto;
+}
+.post_home .post_story {
+  float: right;
+}
+.post_home .post_more {}
+.post_home .post_more a {}
+
+.main_section ul {}
+.main_section ul li {}
+.main_section ul li a {}
+
+.side_section {
+  float: right;
+  width: 28%;
+}
+.side_section>div {}
+.side_section h3 {}
+.side_section ul {}
+.side_section li {}
+.side_section li a {}
+.side_section p {}
+.side_section form {}
+.side_section form input {}
+
+.footer {}
+.footer ul {}
+.footer ul li {}
+.footer ul li a {}
+.footer p {}

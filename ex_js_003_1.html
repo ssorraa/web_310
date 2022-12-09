@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>조건문예제</title>
+</head>
+<style>
+  <blade import|%20url(%26%2339%3Bhttps%3A%2F%2Ffonts.googleapis.com%2Fcss2%3Ffamily%3DDo%2BHyeon%26display%3Dswap%26%2339%3B)%3B%0D>body {
+    background-image: linear-gradient(to left, #eeeeee 50%, #ffffff 50%);
+    background-size: 20px 100%;
+    font-family: 'Do Hyeon', sans-serif;
+  }
+
+  h1 {
+    font-size: 60px;
+    text-align: center;
+    letter-spacing: 20px;
+    color: #989898;
+  }
+
+  .table {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .table ul {
+    text-align: center;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .title li {
+    background-color: beige;
+    padding: 20px;
+    color: rgb(225, 140, 4);
+    font-size: 30px;
+    flex: 1;
+    margin: 0 2px;
+  }
+
+  .write li {
+    background-color: #f3877f;
+    height: 80px;
+    font-size: 28px;
+    color: #fff;
+    flex: 1;
+    margin: 0 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #result {
+    text-align: center;
+    color: #ff6688;
+    font-size: 78px;
+    margin-top: 50px;
+  }
+</style>
+
+<body>
+  <h1>당신의성적표</h1>
+  <div class="table">
+    <ul class="title">
+      <li>국어</li>
+      <li>수학</li>
+      <li>영어</li>
+      <li>총점</li>
+      <li>평균</li>
+    </ul>
+    <ul class="write">
+      <li id="kor"></li>
+      <li id="math"></li>
+      <li id="eng"></li>
+      <li id="add"></li>
+      <li id="avg"></li>
+    </ul>
+    <p>학점 : <span id="abc"></span>학점</p>
+  </div>
+
+  <div id="result"></div>
+
+  <script>
+    let ko = Number(prompt('국어점수는?'));
+    let ma = Number(prompt('수학점수는?'));
+    let en = Number(prompt('영어점수는?'));
+    let ad = Number(ko + ma + en);
+    let av = Number(Math.floor(ad / 3));
+    
+    // document.write('평균점수: ' + Math.floor(av) + '점, ');
+    // if (av >= 90) {
+    //   let ab = ('A');
+    // } else if (av < 90 && av >= 80) {
+    //   let ab = ('B');
+    // } else if (av < 80 && av >= 70) {
+    //   let ab = ('C');
+    // } else if (av < 70 && av >= 60) {
+    //   let ab = ('D');
+    // } else {
+    //   let ab = ('F');
+    // }
+    // 자바스크립트 선택하기 방법
+    if (av >= 90) {
+      document.write('학점: A학점');
+    } else if (av < 90 && av >= 80) {
+      document.write('학점: B학점');
+    } else if (av < 80 && av >= 70) {
+      document.write('학점: C학점');
+    } else if (av < 70 && av >= 60) {
+      document.write('학점: D학점');
+    } else {
+      document.write('학점: F학점');
+    }
+    let rkor = document.getElementById('kor')
+    rkor.innerHTML = ko
+    let rmath = document.getElementById('math')
+    rmath.innerHTML = ma
+    let reng = document.getElementById('eng')
+    reng.innerHTML = en
+    let radd = document.getElementById('add')
+    radd.innerHTML = ad
+    let ravg = document.getElementById('avg')
+    ravg.innerHTML = av
+    // let rabc = document.getElementById('abc')
+    // rabc.innerHTML = ab
+  </script>
+</body>
+
+</html>
