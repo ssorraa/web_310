@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS_요소선택</title>
+</head>
+
+<body>
+  <h1>요소선택</h1>
+  <p>
+    DOM(Document Object Model): HTML같은 문서를 선택,생성,삭제 등을 활용
+  </p>
+  <h2>직접선택메서드</h2>
+  <table border="1px">
+    <tr>
+      <td>메서드이름</td>
+      <td>설명</td>
+    </tr>
+    <tr>
+      <td>getElementById('')</td>
+      <td>HTML ID요소를 가져옴</td>
+    </tr>
+    <tr>
+      <td>getElementsClassName('')</td>
+      <td>HTML Class요소들을 가져옴</td>
+    </tr>
+    <tr>
+      <td>getElementsTagName('')</td>
+      <td>HTML Tag요소들을 가져옴</td>
+    </tr>
+    <tr>
+      <td>querySelector('')</td>
+      <td>선택된 요소중 첫번째 요소만 가져옴<br>
+        Tag를 제외하고 Class/ID를 부를 때는 CSS와 동일하게 부름</td>
+    </tr>
+    <tr>
+      <td>querySelectorAll('')</td>
+      <td>선택된 모든 요소중 요소만 가져옴<br>
+        Tag를 제외하고 Class/ID를 부를 때는 CSS와 동일하게 부름</td>
+    </tr>
+  </table>
+  <div id="ex">
+    <div class="box1 current">
+      <ul>
+        <li>리스트1</li>
+        <li>리스트2</li>
+        <li>리스트3</li>
+      </ul>
+    </div>
+    <div class="box2 current">
+      <ul>
+        <li>리스트1</li>
+        <li>리스트2</li>
+        <li>리스트3</li>
+      </ul>
+    </div>
+  </div>
+  <script>
+    document.getElementById('ex').style.background='#363636';
+    let ex = document.getElementById('ex');
+    let box1 = ex.getElementsByClassName('box1');
+    //let으로 넣을 수 있지만 elements이기때문에 여러개가 들어간걸로 인식한다
+    let current = document.getElementsByClassName('current');
+    //let으로 넣을 수 있지만 elements이기때문에 여러개가 들어간걸로 인식한다
+    let list = document.querySelector('.box1 li')
+// selector는 한개만 불러온다
+let listAll = document.querySelectorAll('.box2 li')
+
+
+    ex.style.color='#ffffff'
+    // box1.style.background='#ffff00'
+    // 요소가 하나여도 elements로 불러냈을 때 순번을 안 정해줬다면 여러개로 인식해서 오류가 난다
+    box1[0].style.background='#ffff00'
+    current[1].style.background='#ff0000'
+    list.style.color= '#0000ff'
+    // listAll.style.color= '#00ffff'
+    // 요소가 여러개여서 오류가 난다. 원래는 
+
+  </script>
+</body>
+
+</html>

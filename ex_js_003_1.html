@@ -93,9 +93,10 @@
     let en = Number(prompt('영어점수는?'));
     let ad = Number(ko + ma + en);
     let av = Number(Math.floor(ad / 3));
-    
 
-    
+
+
+
     let rkor = document.getElementById('kor')
     rkor.innerHTML = ko
     let rmath = document.getElementById('math')
@@ -108,20 +109,8 @@
     ravg.innerHTML = av
     let rabc = document.getElementById('abc')
     rabc.innerHTML = ab
-    // 자바스크립트 선택하기 방법
-    // if (av >= 90) {
-    //   rabc.innerHTML = ab
-    // } else if (av < 90 && av >= 80) {
-    //   document.write('학점: B학점');
-    // } else if (av < 80 && av >= 70) {
-    //   document.write('학점: C학점');
-    // } else if (av < 70 && av >= 60) {
-    //   document.write('학점: D학점');
-    // } else {
-    //   document.write('학점: F학점');
-    // }
-        // document.write('평균점수: ' + Math.floor(av) + '점, ');
-        if (av >= 90) {
+
+    if (av >= 90) {
       rabc.innerHTML = ('A');
     } else if (av < 90 && av >= 80) {
       rabc.innerHTML = ('B');
@@ -131,6 +120,20 @@
       rabc.innerHTML = ('D');
     } else {
       rabc.innerHTML = ('E');
+    }
+    
+    document.write('평균점수: ' + Math.floor(av) + '점, ');
+    // 자바스크립트 선택하기 방법
+    if (av >= 90) {
+      rabc.innerHTML = ab
+    } else if (av < 90 && av >= 80) {
+      document.write('학점: B학점');
+    } else if (av < 80 && av >= 70) {
+      document.write('학점: C학점');
+    } else if (av < 70 && av >= 60) {
+      document.write('학점: D학점');
+    } else {
+      document.write('학점: F학점');
     }
   </script>
 </body>

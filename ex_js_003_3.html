@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>반복문출력</title>
+</head>
+<body>
+  <h1>반복문 출력</h1>
+  <script>
+        // 구구단 2단 만들기
+        document.write('<h2>예시: 구구단 2단 만들기</h2>')
+    document.write('2X1=2<br>')
+    document.write('2X2=4<br>')
+    document.write('2X3=6<br>')
+    document.write('2X4=8<br>')
+    document.write('2X5=10<br>')
+    document.write('2X6=12<br>')
+    document.write('2X7=14<br>')
+    document.write('2X8=16<br>')
+    document.write('2X9=18<br>')
+    //힌트 : document.write('2X'+변수+'='+(변수*2)+'<br>')
+    for(var aa = 1; aa < 10; aa++) {
+      document.write('2X' + aa + '=' + (aa*2) + '<br>')
+    }
+    //문제: 구구단 만들기
+    document.write('<h2>for로 만든 구구단</h2>')
+    for(var i = 1; i < 10; i++) {
+      document.write('<h3>구구단' + i + '단</h3>')
+      for (var a = 1; a < 10; a++) {
+        document.write(i + '\327' + a + '=' + i*a);
+        if(a < 9) {
+          document.write(', ')
+        }
+      } 
+      document.write('<br>')
+    }
+    document.write('<h2>while로 만든 구구단</h2>')
+    let d = 1;
+    while(d < 10){
+      document.write('<h3>구구단' + d + '단</h3>')
+      let e = 1;
+      while(e < 10){
+        document.write(d + '\327' + e + '=' + d*e)
+        if(e < 9) {document.write(', ')}
+        else{document.write('<br>')};
+        e++;
+      }
+      d++;
+    }
+  </script>
+</body>
+</html>

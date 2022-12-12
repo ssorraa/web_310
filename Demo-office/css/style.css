@@ -1,0 +1,341 @@
+@charset 'UTF-8';
+
+/*
+COLORS
+================================================ */
+:root {
+    --light-blue: #4db1ec;
+    --blue: #1665cc;
+    --purple: #b473bf;
+    --pink: #ffb2c1;
+    --orange: #ff9f67;
+    --yellow: #ffd673;
+    --light-green: #a2e29b;
+    --green: #00a2af;
+    --grey: #333;
+    --white: #fff;
+}
+
+/*
+GENERAL STYLING
+================================================ */
+html {
+    font-size: 100%;
+    /* 스무스 스크롤 */
+    scroll-behavior: smooth;
+}
+body {
+	color: var(--grey);
+	font-family: sans-serif;
+}
+
+/*
+COMMON
+================================================ */
+p {
+    line-height: 1.7;
+}
+img {
+    max-width: 100%;
+}
+h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+h1,
+h2 {
+    text-align: center;
+}
+header,
+h1,
+h2,
+.hero-date {
+    font-family: impact, sans-serif;
+}
+
+/* Layout */
+.wrapper {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/*
+HEADER
+================================================ */
+header {
+    background: var(--grey);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+header a {
+    color: var(--white);
+    font-size: 1.5rem;
+}
+.btn-menu {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    border: 1px solid rgba(255,255,255,.5);
+    color: var(--white);
+    padding: .5rem 1rem;
+}
+.main-nav {
+    background: var(--grey);
+    width: 0;
+    position: absolute;
+    z-index: 2;
+    top: 50px;
+    right: 0;
+    overflow: hidden;
+    transition: .5s;
+}
+.main-nav li {
+    text-align: center;
+    margin: 2rem 0;
+}
+.main-nav a {
+    display: block;
+}
+.main-nav.open-menu {
+    width: 100%;
+}
+
+/*
+HERO
+================================================ */
+#hero {
+    /* ↓ 생략형이면 브라우저에 따라 제대로 동작하지 않을 수 있음
+    background: var(--light-blue) url('../images/hero.jpg') no-repeat center / cover; */
+    background-color: var(--light-blue);
+    background-image: url('../images/hero.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: screen;
+    animation: bg-color 24s infinite;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+}
+@keyframes bg-color {
+    0% { background-color: var(--light-blue); }
+    12.5% { background-color: var(--blue); }
+    25% { background-color: var(--purple); }
+    37.5% { background-color: var(--pink); }
+    50% { background-color: var(--orange); }
+    62.5% { background-color: var(--yellow); }
+    75% { background-color: var(--light-green); }
+    87.5% { background-color: var(--green); }
+    100% { background-color: var(--light-blue); }
+}
+#hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+}
+.hero-date {
+    text-align: center;
+    border-top: 3px solid var(--grey);
+    border-bottom: 3px solid var(--grey);
+    padding: .5rem 0;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/*
+ABOUT
+================================================ */
+#about {
+    padding: 4rem 1rem;
+}
+#about h2 {
+  background: linear-gradient(var(--yellow), var(--orange));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+}
+#about p {
+    margin-bottom: 2rem;
+}
+
+/*
+NEWS
+================================================ */
+#news {
+    background-image: linear-gradient(var(--light-green), var(--green));
+    padding: 7rem 0;
+    -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
+    clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
+}
+#news h2 {
+    color: var(--white);
+}
+.news-table {
+    color: var(--white);
+    width: 100%;
+}
+.news-table tr {
+    border-bottom: 1px solid rgba(255,255,255,.5);
+}
+.news-table td {
+    display: block;
+    line-height: 1.5;
+}
+.news-date {
+    font-size: .875rem;
+    padding-top: 1rem;
+}
+.news-content {
+    padding-bottom: 1rem;
+}
+
+/*
+SPEAKERS
+================================================ */
+#speakers {
+    padding: 4rem 1rem;
+}
+.speakers-list {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+.speakers-text {
+    margin-left: 1rem;
+}
+#speakers h2 {
+  background: linear-gradient(var(--light-blue), var(--blue));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+}
+#speakers h3 {
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+}
+#speakers img {
+    border-radius: 50%;
+    width: 20%;
+}
+
+/*
+TICKET
+================================================ */
+#ticket {
+    background-image: linear-gradient(var(--pink), var(--purple));
+    padding: 6rem 1rem 2rem;
+    -webkit-clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 100%);
+}
+#ticket h2 {
+    color: var(--white);
+}
+.ticket-form {
+    max-width: 480px;
+    margin: 0 auto 5rem;
+}
+.ticket-form label {
+    color: var(--white);
+    display: block;
+    margin-bottom: .5rem;
+}
+.ticket-field {
+    background: rgba(255,255,255,.6);
+    padding: 1rem;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+.ticket-btn {
+    background: var(--grey);
+    color: var(--white);
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+/*
+FOOTER
+================================================ */
+.footer {
+    border-top: 1px solid rgba(255,255,255,0.5);
+    padding-top: 2rem;
+    text-align: center;
+    font-size: .875rem;
+    color: var(--white);
+}
+.footer a {
+    text-decoration: underline;
+}
+
+/*
+DESKTOP SIZE
+================================================ */
+@media (min-width: 600px) {
+/* Common */
+    h2 {
+        font-size: 5rem;
+    }
+    a:hover,
+    .ticket-btn:hover {
+        transition: .3s;
+    }
+    a:hover {
+        color: var(--blue);
+    }
+    .ticket-btn:hover {
+        background: var(--blue);
+    }
+
+/* Header */
+    .btn-menu {
+        display: none;
+    }
+    .main-nav {
+        width: 100%;
+        position: static;
+        display: flex;
+    }
+    .main-nav li {
+        margin: 0 0 0 1.5rem;
+    }
+/* Hero */
+    #hero h1 {
+        font-size: 6.875rem;
+    }
+    .hero-date {
+        font-size: 3rem;
+    }
+/* News */
+    .news-table td {
+        display: table-cell;
+    }
+    .news-date {
+        padding: 1.125rem 0 1rem 1rem;
+    }
+    .news-content {
+        padding: 1rem 1rem 1rem 0;
+    }
+/* Speakers */
+    #speakers h2 {
+        margin-bottom: 4rem;
+    }
+    .speakers-list {
+        margin-bottom: 3rem;
+    }
+    .speakers-text {
+        margin-left: 2rem;
+    }
+}
