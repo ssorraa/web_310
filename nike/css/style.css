@@ -1,0 +1,227 @@
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/css?family=Play);
+@import url(http://fonts.googleapis.com/css?family=Monoton);
+
+/*    Reset CSS  */
+* { margin:0;  padding:0; }
+ol,ul { list-style: none; }
+a { outline:0; text-decoration:none; color:#bbb;}
+img { border:0;}
+body { position:fixed;  width:100%; height:100%; background:#111;}
+
+
+
+/*배경동영상*/
+.vid {width: 100%;
+	height: 100%;
+	position: fixed;
+	opacity: 0.9}
+.vid video {width: 100%;
+		min-width: 1600px;}	
+
+/*로고*/
+
+h1 {position: fixed; z-index: 10;
+	top: 40px;
+	left: 40px;}
+h1 img {width: 280px;
+		height: auto;}
+header {background:linear-gradient(-45deg,#e6fc55,#b9fb05,#97e031 ) ;
+		position: fixed;
+		width: 700px;
+		height: 100%;
+		transform: skew(-40deg);
+		top: 0;
+		left: -420px
+	}
+
+/*1depth 설정*/
+#gnb  {width: 220px;
+		position: absolute;
+		top: 150px;
+		right: 0}
+#gnb li a {display: block;
+		width: 220px;
+		height: 50px;
+		font-size: 18px;
+		font-weight: bold;
+		font-family: play;
+		color: #222;
+	 text-align: right;
+	padding-right: 40px;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	line-height: 3}
+#gnb>li {position: relative;}	
+#gnb>li.on>a {background-color: #111;
+			 color: #fff}	
+#gnb>li:hover a {background-color: #111;
+				color: #fff}
+
+#gnb em {display: inline-block; transform: skewX(40deg)!important;}									
+
+#gnb em i {margin-right: 20px}
+
+/*2depth*/
+
+#gnb ul {position: absolute;
+		left: 0;
+		top: 0;
+		transition: all 0.4s;
+		opacity: 0}
+#gnb>li:hover ul {left: 205px;
+				opacity: 0.8}
+						
+#gnb ul a {display: block;
+			border-bottom: 1px solid #b9fb05;
+			font-size: 16px;
+			font-weight: bold;
+			line-height: 2.5;
+			font-family: arial;
+			width: 150px;
+			height: 40px;
+			background: #222;
+			padding-left: 50px;
+			margin-bottom: 3px;
+			box-sizing: border-box;
+			transition: all 0.6s}
+
+#gnb ul a:hover {background: #b9fb05;
+				color: #333}
+#gnb>li.on ul {opacity: 0.8;
+				left: 205px;
+				top: -10px;}
+
+#gnb>li.on ul a {background: #444;
+				opacity: 0.7}
+
+#gnb>li.on ul a:hover {color: #ccc}
+
+
+/*sns*/
+#sns {position: fixed;
+	right: 50px;
+	top: 50px}
+#sns li {float: left;
+		margin-right: 30px;}
+#sns i {font-size: 25px;
+		color: #b9fb05;
+		opacity: 0.5;
+		transition: all 0.4s}	
+#sns span{display: inline-block;
+		text-indent: -9999px;}				
+
+#sns i:hover {opacity: 1;
+			transform:scale(1.3); }
+
+
+/*텍스트박스*/
+
+.txtBox {width: 340px;
+		height: 280px;
+		position: fixed;
+		right:70px; 
+		top:200px;}	
+.txt {position: absolute;
+	font-size: 34px;
+	font-family: play;
+	color: #bbb;
+	letter-spacing: -2px;
+	top: 200px;}
+.txt b {font-size: 34px;
+		font-weight: bold;
+		font-family: arial;
+		color: #b9fb05;
+		margin-left: 20px
+	}	
+.tit {position: absolute;
+	font-size: 160px;
+	color: #b9fb05;
+	font-family: 'Monoton';
+	letter-spacing: -1px;}	
+.tit em {font-size: 50px;
+		font-family: play;
+		color: #fff}		
+
+
+/*컨텐츠*/
+
+#side {width: 800px;
+		height: 100%;
+		position: fixed;
+		bottom: 0;
+		right: -800px;
+		background: #111;
+		transform: skew(-40deg);
+		opacity: 0.5;
+		transition: all 0.5s}
+#side:hover {right: -500px;
+			opacity: 0.8}
+
+#side .con {width: 400px;
+			height: 100%;
+			position: absolute;
+			background: #000;
+			bottom: 0;
+			left: 150px;
+			padding: 10px;
+			box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			transition: all 1s}	
+#side:hover .con {left:50px;}
+
+#side .con p {width: 300px;
+			height: 100px;
+			position: absolute;
+			letter-spacing: 50px;}
+#side .con p em {display: inline-block;
+			transform: skew(40deg);
+			color: #a0bd50;
+			font-size: 16px;
+			letter-spacing: 1.7px;
+			font-weight: bold;
+			font-family: arial;}
+
+#side .con p:nth-child(1) {bottom: 270px; transform: translateX(200px);}
+#side .con p:nth-child(2) {bottom: 160px;transform: translateX(200px);}
+#side .con p:nth-child(3) {bottom: 50px;transform: translateX(200px);}
+
+#side .con p img {width: 300px;
+				height: 70px;
+				opacity: 0.3;
+				transition: all 0.5s}
+#side .con p img:hover {opacity: 1}				
+
+#side:hover .con p {transform: translateX(0);}
+
+/*자동롤링버튼*/
+
+#side .btn {width: 150px;
+			height: 50px;
+			position: absolute;
+			bottom: 40px;
+			left: 100px;
+			color: #b9fb05;
+			transform: skew(40deg);}
+
+#side:hover .btn {left: 700px}
+#side .btn i {font-size: 60px;
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				opacity: 1}	
+
+#side .btn i:nth-child(1) {animation: ani linear 1.5s 0s infinite}
+#side .btn i:nth-child(2) {animation: ani linear 1.5s 0.5s infinite}
+#side .btn i:nth-child(3) {animation: ani linear 1.5s 1s infinite}
+
+@keyframes ani {
+	0% {opacity: 1;
+		transform: scale(1);
+		right: 0;}
+	100% {opacity: 0;
+		transform: scale(1.4);
+		right: 100px;}
+}					
