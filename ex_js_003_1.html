@@ -8,7 +8,8 @@
   <title>조건문예제</title>
 </head>
 <style>
-  <blade import|%20url(%26%2339%3Bhttps%3A%2F%2Ffonts.googleapis.com%2Fcss2%3Ffamily%3DDo%2BHyeon%26display%3Dswap%26%2339%3B)%3B%0D>body {
+  @import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Do+Hyeon&family=Noto+Sans+KR&family=Poor+Story&display=swap');
+  body {
     background-image: linear-gradient(to left, #eeeeee 50%, #ffffff 50%);
     background-size: 20px 100%;
     font-family: 'Do Hyeon', sans-serif;
@@ -76,9 +77,9 @@
       <li>평균</li>
     </ul>
     <ul class="write">
-      <li id="kor"></li>
-      <li id="math"></li>
-      <li id="eng"></li>
+      <li id="kor" onclick="korset()"></li>
+      <li id="math"onclick="mathset()"></li>
+      <li id="eng"onclick="engset()"></li>
       <li id="add"></li>
       <li id="avg"></li>
     </ul>
@@ -86,30 +87,32 @@
   </div>
 
   <div id="result"></div>
-
   <script>
+        let rkor = document.getElementById('kor')
+        let rmath = document.getElementById('math')
+        let reng = document.getElementById('eng')
+        let radd = document.getElementById('add')
+        let ravg = document.getElementById('avg')
+        let rabc = document.getElementById('abc')
+        let ko;
+        let ma;
+        let en;
+function korset() { 
     let ko = Number(prompt('국어점수는?'));
+    rkor.innerHTML = ko;
+    globalThis = ko;
+}
+function mathset() { 
     let ma = Number(prompt('수학점수는?'));
+    rmath.innerHTML = ma;
+  }
+function engset() { 
     let en = Number(prompt('영어점수는?'));
+    reng.innerHTML = en;
     let ad = Number(ko + ma + en);
+    radd.innerHTML = ad;
     let av = Number(Math.floor(ad / 3));
-
-
-
-
-    let rkor = document.getElementById('kor')
-    rkor.innerHTML = ko
-    let rmath = document.getElementById('math')
-    rmath.innerHTML = ma
-    let reng = document.getElementById('eng')
-    reng.innerHTML = en
-    let radd = document.getElementById('add')
-    radd.innerHTML = ad
-    let ravg = document.getElementById('avg')
-    ravg.innerHTML = av
-    let rabc = document.getElementById('abc')
-    rabc.innerHTML = ab
-
+    ravg.innerHTML = av;
     if (av >= 90) {
       rabc.innerHTML = ('A');
     } else if (av < 90 && av >= 80) {
@@ -121,20 +124,24 @@
     } else {
       rabc.innerHTML = ('E');
     }
+  }
+
+
+
     
-    document.write('평균점수: ' + Math.floor(av) + '점, ');
+    // document.write('평균점수: ' + Math.floor(av) + '점, ');
     // 자바스크립트 선택하기 방법
-    if (av >= 90) {
-      rabc.innerHTML = ab
-    } else if (av < 90 && av >= 80) {
-      document.write('학점: B학점');
-    } else if (av < 80 && av >= 70) {
-      document.write('학점: C학점');
-    } else if (av < 70 && av >= 60) {
-      document.write('학점: D학점');
-    } else {
-      document.write('학점: F학점');
-    }
+    // if (av >= 90) {
+    //   rabc.innerHTML = ab
+    // } else if (av < 90 && av >= 80) {
+    //   document.write('학점: B학점');
+    // } else if (av < 80 && av >= 70) {
+    //   document.write('학점: C학점');
+    // } else if (av < 70 && av >= 60) {
+    //   document.write('학점: D학점');
+    // } else {
+    //   document.write('학점: F학점');
+    // }
   </script>
 </body>
 

@@ -1,0 +1,139 @@
+@charset 'uft-8';
+
+/* 전체설정 */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #999;
+}
+
+/* 옛날 브라우저는 img에 border가 들어갔어서 미연에 방지 */
+img {
+  border: none;
+  vertical-align: bottom;
+}
+
+/* 전체 화면 설정 */
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+section h2 {
+  text-align: center;
+}
+
+section {
+  height: 800px; /* 임의설정 */
+  /* scroll-margin-top: 100px; */
+}
+
+section#about {
+  background-color: #ddd;
+}
+
+section#news {
+  background-color: #ccc;
+}
+
+section#speakers {
+  background-color: #bbb;
+}
+
+section#ticket {
+  background-color: #aaa;
+}
+
+/* 1em=16px */
+/* 헤더 */
+.header {
+  background-color: #333;
+  width: 100%;
+  /* fixed로 바꿨기때문에 안 넣으면 줄어들음 */
+  padding: 16px 0;
+  position: fixed;
+}
+
+.header .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  display: block;
+  font-size: 20px;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 20px;
+}
+
+.menu {}
+
+.menu ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu li {}
+
+.menu a {
+  display: block;
+  font-size: 20px;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 20px;
+}
+/* 메인이미지 */
+.mainImg {
+  background-color: #4db1ec;
+  background-image: url(../img/hero.jpg);
+  background-size: cover;
+  text-align: center;
+  height: 600px;/* 임의설정 */
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-blend-mode: screen;
+  display: flex;
+  align-items: center;
+  animation: bgColor 24s infinite;
+}
+.mainImg h3 {}
+/* 애니메이션 설정 */
+
+@keyframes boldh3 {
+  0% {font-size: 20px;
+  font-weight: bold;}
+  100% {font-size: 60px;
+  font-weight: normal;}
+}
+@keyframes bgColor {
+  0% {background-color: #4db1ec;}
+  12.5% {background-color: #1665cc;}
+  25% {background-color: #b473bf;}
+  37.5% {background-color: #ffb2c1;}
+  50% {background-color: #ff9f67;}
+  62.5% {background-color: #ffd673;}
+  75% {background-color: #a2e29b;}
+  87.5% {background-color: #00a2af;}
+  100% {background-color: #4db1ec;}
+}
+.mainImg h3 {
+  font-size: 20px;
+  font-weight: bold;
+  animation: boldh3 1s;
+  animation-fill-mode: forwards;
+}
+
+/* 미디어쿼리----------------------------------- */

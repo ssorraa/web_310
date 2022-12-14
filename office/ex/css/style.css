@@ -1,0 +1,137 @@
+@charset 'utf-8';
+
+/* 전체 설정 */
+* {
+  padding: 0;
+  margin: 0;
+  scroll-margin-top:100px;/* 임시설정 */
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: brown;
+}
+html {
+  scroll-behavior: smooth;
+}
+img {
+  vertical-align: bottom;
+}
+.wrapper {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+  height: 800px;/* 임시설정 */
+}
+h3 {}
+
+/* 헤더 */
+.header {
+  width: 100%;
+  background-color: #333;
+  padding: 16px 0;
+  position: fixed;
+}
+.header .wrapper {
+  display: flex;
+  justify-content: space-between;
+  height: auto;
+}
+.logo {
+  display: block;
+  padding: 8px;
+  margin:  0 8px;
+  color: white;
+  font-size: 20px;
+}
+.menu {}
+.menu ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.menu ul li {}
+.menu a {
+  display: block;
+  padding: 8px;
+  margin:  0 8px;
+  color: white;
+  font-size: 20px;
+}
+
+/* 메인화면 */
+#main {
+  text-align: center;
+  background-color: #4db1ec;
+  background-image: url(../../img/hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-blend-mode: screen;
+  animation: bgColor 24s infinite;
+}
+@keyframes bgColor {
+  0% {background-color: #4db1ec;}
+  12.5% {background-color: #3376ce;}
+  25% {background-color: #b473bf;}
+  37.5% {background-color: #ffb2c1;}
+  50% {background-color: #ff9f67;}
+  62.5% {background-color: #ffd673;}
+  75% {background-color: #a2e29b;}
+  87.5% {background-color: #00a2af;}
+  100% {background-color: #4db1ec;}
+}
+#main .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#main h2 {
+  font-size: 60px;
+}
+#main .wrapper>div {
+  margin: 10px 0;
+  padding: 30px;
+  border-top: solid 2px black;
+  border-bottom: solid 2px black;
+  width: 90%;
+
+}
+#main .wrapper>p {}
+
+/* About */
+#about {}
+#about .wrapper {}
+#about h3 {}
+#about p {}
+
+/* News */
+#news {}
+#news .wrapper {}
+#news h3 {}
+#news ul {}
+#news li {}
+#news li time {}
+#news li p {}
+
+/* Speakers */
+#speakers {}
+#speakers .wrapper {}
+#speakers h3 {}
+#speakers .content {}
+#speakers .content h4 {}
+#speakers .content p {}
+
+/* Ticket + Footer */
+#ticket {}
+#ticket .wrapper {}
+#ticket h3 {}
+#ticket form {}
+#ticket form label {}
+#ticket form  input {}
+#ticket .footer {}
+#ticket .footer p {}

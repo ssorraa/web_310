@@ -8,7 +8,7 @@
   <title>JS_요소선택</title>
 </head>
 
-<body>
+<body onscroll="scrolltest()">
   <h1>요소선택</h1>
   <p>
     DOM(Document Object Model): HTML같은 문서를 선택,생성,삭제 등을 활용
@@ -59,26 +59,116 @@
     </div>
   </div>
   <script>
-    document.getElementById('ex').style.background='#363636';
+    document.getElementById('ex').style.background = '#363636';
     let ex = document.getElementById('ex');
     let box1 = ex.getElementsByClassName('box1');
     //let으로 넣을 수 있지만 elements이기때문에 여러개가 들어간걸로 인식한다
     let current = document.getElementsByClassName('current');
     //let으로 넣을 수 있지만 elements이기때문에 여러개가 들어간걸로 인식한다
     let list = document.querySelector('.box1 li')
-// selector는 한개만 불러온다
-let listAll = document.querySelectorAll('.box2 li')
+    // selector는 한개만 불러온다
+    let listAll = document.querySelectorAll('.box2 li')
 
 
-    ex.style.color='#ffffff'
+    ex.style.color = '#ffffff'
     // box1.style.background='#ffff00'
     // 요소가 하나여도 elements로 불러냈을 때 순번을 안 정해줬다면 여러개로 인식해서 오류가 난다
-    box1[0].style.background='#ffff00'
-    current[1].style.background='#ff0000'
-    list.style.color= '#0000ff'
-    // listAll.style.color= '#00ffff'
-    // 요소가 여러개여서 오류가 난다. 원래는 
+    box1[0].style.background = '#ffff00'
+    current[1].style.background = '#ff0000'
+    list.style.color = '#0000ff'
+    // listAll.style.color = '#00ffff'
+    // 요소가 여러개여도 오류가 안 나지만 왜 오류가 나는지 모르겠다..
+  </script>
+  <h2>Event</h2>
+  <p>선택자 혹은 도큐먼트상에서 행동을 가했을 때 발생하는 현상</p>
+  <table border="1">
+    <tr>
+      <td>이벤트</td>
+      <td>설명</td>
+    </tr>
+    <tr>
+      <td>click</td>
+      <td>마우스를 클릭했을 때 이벤트가 발생한다.</td>
+    </tr>
+    <tr>
+      <td>mouseover</td>
+      <td>마우스가 일정 공간에 올라왔을 때 이벤트가 발생한다.</td>
+    </tr>
+    <tr>
+      <td>mousemove</td>
+      <td>마우스가 움직였을 때 이벤트가 발생한다.</td>
+    </tr>
+    <tr>
+      <td>mouseenter</td>
+      <td>마우스가 일정 공간에 들어왔을 때 이벤트가 발생한다.</td>
+    </tr>
+    <tr>
+      <td>mouseleave</td>
+      <td>마우스가 일정 공간에서 떠났을 때 이벤트가 발생한다.</td>
+    </tr>
+    <tr>
+      <td>submit</td>
+      <td>submit 버튼을 눌렀을 때 이벤트가 발생한다.</td>
+    </tr>
+    <tr>
+      <td>load</td>
+      <td>페이지를 열었을 때 이벤트가 발생한다.</td>
+    </tr>
+    <tr>
+      <td>resize</td>
+      <td>도큐먼트 사이즈가 변경되었을 때 이벤트가 발생한다.</td>
+    </tr>
+    <tr>
+      <td>scroll</td>
+      <td>스크롤바가 움직였을 때 이벤트가 발생한다.</td>
+    </tr>
+  </table>
+  <div class="ex2">
+    <!-- 인라인방식의 이벤트 구현 -->
+    <button onclick="showText()">click me</button>
+    <p></p>
+    <p></p>
+    <p></p>
+    <button onclick="clickTest()">연습해봅시다.</button>
+  </div>
 
+  <!-- addEventListener -->
+  <button id="btn">직접연결창</button>
+  <script>
+    function showText() {
+      let show = document.querySelector('.ex2>p').innerHTML
+      if (show == 'Hello') {
+        document.querySelector('.ex2>p').innerHTML = ''
+        document.querySelector('body').style.backgroundColor = '#ffffff'
+        document.querySelector('body').style.color = '#000000'
+      } else if (show == '') {
+        document.querySelector('.ex2>p').innerHTML = 'Hello'
+        document.querySelector('body').style.backgroundColor = '#000000'
+        document.querySelector('body').style.color = '#ffffff'
+      }
+    }
+
+    function clickTest() {
+      let click = document.querySelectorAll('.ex2>p')[2].innerHTML
+      if (click == '') {
+        document.querySelectorAll('.ex2>p')[2].innerHTML = 'da'
+      } else if (click == 'da') {
+        document.querySelectorAll('.ex2>p')[2].innerHTML = ''
+        document.querySelectorAll('.ex2>p')[2].style.backgroundColor = '#ddddff'
+        document.querySelectorAll('.ex2>button')[1].style.border = 'solid 1px #000000'
+        document.querySelectorAll('.ex2>button')[1].style.borderRadius = '4px'
+        document.querySelectorAll('.ex2>button')[1].style.backgroundColor = '#ffdddd'
+      }
+    }
+    let sctest = Number(10)
+    function scrolltest() {
+      document.querySelector('h1').style.fontSize = sctest
+      sctest++
+    }
+    document.getElementById('btn').addEventListener('mouseleave',
+      function (event) {
+        alert('성공하셨습니다.')
+      })
   </script>
 </body>
 

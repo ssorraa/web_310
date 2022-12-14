@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>날짜기입하기</h1>
+  <!-- <script>
+    let now = new Date();
+    let year = now.getFullYear();
+    let month = now.getMonth() + 1;
+    let date = now.getDate();
+    let day = now.getDay();
+    let hour = now.getHours();
+    let minute = now.getMinutes();
+    let second = now.getSeconds();
+    let msecond = now.getMilliseconds();
+    document.write(now + '<br>')
+    document.write(year + '년<br>')
+    document.write(month + '월<br>')
+    document.write(date + '일<br>')
+    document.write(day + '요일<br>')
+    document.write(hour + '시<br>')
+    document.write(minute + '분<br>')
+    document.write(second + '.')
+    document.write(msecond + '초')
+  </script> -->
+
+  <div id="wrap">
+    <h1>안녕하세요</h1>
+    오늘은 <span></span>년 <span></span>월 <span></span>일 입니다.
+    <p>현재 시간을 활인하려면 버튼을 클릭하세요</p>
+    <button id="btn" onclick="timeView()" onmouseenter="timeEnter()" onmouseleave="timeLeave()">시간 확인</button>
+    <div></div>
+  </div>
+  <script>
+    let now = new Date();
+    let year = now.getFullYear();
+    let month = now.getMonth() + 1;
+    let date = now.getDate();
+    let day = now.getDay();
+    let hour = now.getHours();
+    let minute = now.getMinutes();
+    let second = now.getSeconds();
+    let bodyCss = document.querySelector('body').style
+    let buttonCss = document.querySelector('button').style
+    document.querySelector('h1').style.width = '100%';
+    bodyCss.display = 'flex';
+    bodyCss.flexDirection = 'colrumn';
+    bodyCss.flexWrap = 'wrap';
+    bodyCss.width = '90%';
+    bodyCss.margin = '0 5%';
+    bodyCss.textAlign = 'center';
+    bodyCss.backgroundColor = '#5f5dad';
+    bodyCss.color = 'white';
+    bodyCss.justifyContent = 'center';
+    buttonCss.backgroundColor = 'rgba(0,0,0,0.3)';
+    buttonCss.border = 'double 10px rgba(255,255,255,0.2)';
+    buttonCss.color = 'rgba(255,255,255,0.2)';
+    buttonCss.borderRadius = '15px';
+    buttonCss.width = '100px';
+    buttonCss.height = '100px';
+    buttonCss.transition = '0.4s';
+    buttonCss.marginBottom = '30px';
+    document.querySelectorAll('span')[0].innerHTML = year
+    document.querySelectorAll('span')[1].innerHTML = month
+    document.querySelectorAll('span')[2].innerHTML = date
+
+    function timeView() {
+      let now = new Date();
+      document.querySelector('div>div').innerHTML = '현재 시간은' + hour + '시 ' + minute + '분 ' + second + '초입니다'
+    }
+
+    function timeEnter() {
+      buttonCss.backgroundColor = 'rgba(0,0,0,0.2)';
+      buttonCss.border = 'double 10px rgba(255,255,255,0.7)';
+      buttonCss.color = 'rgba(255,255,255,0.9)';
+    }
+    function timeLeave() {
+      buttonCss.backgroundColor = 'rgba(0,0,0,0.3)';
+    buttonCss.border = 'double 10px rgba(255,255,255,0.2)';
+    buttonCss.color = 'rgba(255,255,255,0.2)';
+    }
+  </script>
+</body>
+
+</html>
