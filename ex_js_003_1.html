@@ -83,7 +83,7 @@
       <li id="add"></li>
       <li id="avg"></li>
     </ul>
-    <p>학점 : <span id="abc"></span>학점</p>
+    <!-- <p>학점 : <span id="abc"></span>학점</p> -->
   </div>
 
   <div id="result"></div>
@@ -94,34 +94,42 @@
         let radd = document.getElementById('add')
         let ravg = document.getElementById('avg')
         let rabc = document.getElementById('abc')
+        let ko;
+        let ma;
+        let en;
+        let ad;
+        let av;
 function korset() { 
-    let ko = Number(prompt('국어점수는?'));
+    ko = Number(prompt('국어점수는?'));
     rkor.innerHTML = ko;
 }
-let ko = Number(korset);
 function mathset() { 
-    let ma = Number(prompt('수학점수는?'));
+    ma = Number(prompt('수학점수는?'));
     rmath.innerHTML = ma;
   }
 function engset() { 
-    let en = Number(prompt('영어점수는?'));
+    en = Number(prompt('영어점수는?'));
     reng.innerHTML = en;
-    let ad = Number(ko + ma + en);
-    radd.innerHTML = ad;
-    let av = Number(Math.floor(ad / 3));
-    ravg.innerHTML = av;
-    if (av >= 90) {
-      rabc.innerHTML = ('A');
-    } else if (av < 90 && av >= 80) {
-      rabc.innerHTML = ('B');
-    } else if (av < 80 && av >= 70) {
-      rabc.innerHTML = ('C');
-    } else if (av < 70 && av >= 60) {
-      rabc.innerHTML = ('D');
-    } else {
-      rabc.innerHTML = ('E');
-    }
   }
+  if (ad != Number(ko + ma + en) //&& find(ko) && find(ma) && find(en)) {
+  ad = Number(ko + ma + en);
+    radd.innerHTML = ad;
+    av = Number(Math.floor(ad / 3));
+    ravg.innerHTML = av;
+  }
+// if (find(av) == true) {
+//   if(av < 90){
+//       rabc.innerHTML = ('A');
+//     } else if (av < 90 && av >= 80) {
+//       rabc.innerHTML = ('B');
+//     } else if (av < 80 && av >= 70) {
+//       rabc.innerHTML = ('C');
+//     } else if (av < 70 && av >= 60) {
+//       rabc.innerHTML = ('D');
+//     } else if (av <= 0 ){
+//       rabc.innerHTML = ('E');
+//     }
+//   }
 
 
 
