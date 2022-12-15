@@ -8,8 +8,7 @@
   <title>조건문예제</title>
 </head>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Do+Hyeon&family=Noto+Sans+KR&family=Poor+Story&display=swap');
-  body {
+body{
     background-image: linear-gradient(to left, #eeeeee 50%, #ffffff 50%);
     background-size: 20px 100%;
     font-family: 'Do Hyeon', sans-serif;
@@ -58,7 +57,7 @@
     align-items: center;
   }
 
-  #result {
+  #abc {
     text-align: center;
     color: #ff6688;
     font-size: 78px;
@@ -78,75 +77,72 @@
     </ul>
     <ul class="write">
       <li id="kor" onclick="korset()"></li>
-      <li id="math"onclick="mathset()"></li>
-      <li id="eng"onclick="engset()"></li>
+      <li id="math" onclick="mathset()"></li>
+      <li id="eng" onclick="engset()"></li>
       <li id="add"></li>
       <li id="avg"></li>
     </ul>
-    <!-- <p>학점 : <span id="abc"></span>학점</p> -->
+    <span id="abc"></span>
   </div>
-
-  <div id="result"></div>
   <script>
-        let rkor = document.getElementById('kor')
-        let rmath = document.getElementById('math')
-        let reng = document.getElementById('eng')
-        let radd = document.getElementById('add')
-        let ravg = document.getElementById('avg')
-        let rabc = document.getElementById('abc')
-        let ko;
-        let ma;
-        let en;
-        let ad;
-        let av;
-function korset() { 
-    ko = Number(prompt('국어점수는?'));
-    rkor.innerHTML = ko;
-}
-function mathset() { 
-    ma = Number(prompt('수학점수는?'));
-    rmath.innerHTML = ma;
-  }
-function engset() { 
-    en = Number(prompt('영어점수는?'));
-    reng.innerHTML = en;
-  }
-  if (ad != Number(ko + ma + en) //&& find(ko) && find(ma) && find(en)) {
-  ad = Number(ko + ma + en);
-    radd.innerHTML = ad;
-    av = Number(Math.floor(ad / 3));
-    ravg.innerHTML = av;
-  }
-// if (find(av) == true) {
-//   if(av < 90){
-//       rabc.innerHTML = ('A');
-//     } else if (av < 90 && av >= 80) {
-//       rabc.innerHTML = ('B');
-//     } else if (av < 80 && av >= 70) {
-//       rabc.innerHTML = ('C');
-//     } else if (av < 70 && av >= 60) {
-//       rabc.innerHTML = ('D');
-//     } else if (av <= 0 ){
-//       rabc.innerHTML = ('E');
-//     }
-//   }
+    let rkor = document.getElementById('kor')
+    let rmath = document.getElementById('math')
+    let reng = document.getElementById('eng')
+    let radd = document.getElementById('add')
+    let ravg = document.getElementById('avg')
+    let rabc = document.getElementById('abc')
+    let ko;
+    let ma;
+    let en;
+    let ad;
+    let av;
 
+    function korset() {
+      ko = Number(prompt('국어점수는?'));
+      while (isNaN(ko) == true) {
+        ko = Number(prompt('국어 점수를 숫자로 적어주세요'));
+      }
+      rkor.innerHTML = ko;
+      add();
+    }
 
+    function mathset() {
+      ma = Number(prompt('수학점수는?'));
+      while (isNaN(ma) == true) {
+        ma = Number(prompt('수학 점수를 숫자로 적어주세요'));
+      }
+      rmath.innerHTML = ma;
+      add();
+    }
 
-    
-    // document.write('평균점수: ' + Math.floor(av) + '점, ');
-    // 자바스크립트 선택하기 방법
-    // if (av >= 90) {
-    //   rabc.innerHTML = ab
-    // } else if (av < 90 && av >= 80) {
-    //   document.write('학점: B학점');
-    // } else if (av < 80 && av >= 70) {
-    //   document.write('학점: C학점');
-    // } else if (av < 70 && av >= 60) {
-    //   document.write('학점: D학점');
-    // } else {
-    //   document.write('학점: F학점');
-    // }
+    function engset() {
+      en = Number(prompt('영어점수는?'));
+      while (isNaN(en) == true) {
+        en = Number(prompt('국어 점수를 숫자로 적어주세요'));
+      }
+      reng.innerHTML = en;
+      add();
+    }
+
+    function add() {
+      if (isNaN(ko) == false && isNaN(ma) == false && isNaN(en) == false) {
+        ad = Number(ko + ma + en);
+        radd.innerHTML = ad;
+        av = Number(Math.floor(ad / 3));
+        ravg.innerHTML = av;
+        if(av >= 90){
+          rabc.innerHTML = ('A학점');
+        } else if (av < 90 && av >= 80) {
+          rabc.innerHTML = ('B학점');
+        } else if (av < 80 && av >= 70) {
+          rabc.innerHTML = ('C학점');
+        } else if (av < 70 && av >= 60) {
+          rabc.innerHTML = ('D학점');
+        } else {
+          rabc.innerHTML = ('E학점');
+        }
+      }
+    }
   </script>
 </body>
 
