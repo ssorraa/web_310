@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>트랜스폼</title>
+</head>
+<body>
+  
+</body>
+</html>
+
+transform 학습
+  <h2>transform</h2>
+  <p>안의 내용까지 모두 변형됨</p>
+  <div id="scale">
+    <div class="box1">
+      <p>
+        scale(1.2)<br>
+        x축 y축 비율
+      </p>
+    </div>
+    <div class="box2">
+      <p>
+        scaleX(1.5)<br>
+        x축 비율
+      </p>
+    </div>
+    <div class="box3">
+      <p>
+        scaleY(0.5)<br>
+        y축 비율
+      </p>
+    </div>
+  </div>
+  <div id="rotate">
+    <div class="box1">
+      <p>
+        rotate(30deg)<br>
+        시계 방향
+      </p>
+    </div>
+    <div class="box2">
+      <p>
+        rotateX(-45deg)<br>
+        반 시계 반향
+      </p>
+    </div>
+    <div class="box3">
+      <p>
+        rotate(30deg)<br>
+        origin: right top<br>
+        시계 방향<br>
+        우측 상단 기점
+      </p>
+    </div>
+  </div>
+  <div id="translate">
+    <div class="box1">
+      <p>
+        translate(100px,100px)<br>
+        x축 이동, y축 이동<br>
+        (값 하나만 적으면 translateX와 동일)
+      </p>
+    </div>
+    <div class="box2">
+      <p>
+        translateX(50%)<br>
+        x축 이동
+      </p>
+    </div>
+    <div class="box3">
+      <p>
+        translateY(100px)<br>
+        y축 이동
+      </p>
+    </div>
+  </div>
+  <div id="skew">
+    <div class="box1">
+      <p>
+        skew(20deg,20deg)<br>
+        x축 왜곡, y축 왜곡<br>
+        (값 하나만 적으면 skewX와 동일)
+      </p>
+    </div>
+    <div class="box2">
+      <p>
+        skewX(20deg)<br>
+        x축 왜곡
+      </p>
+    </div>
+    <div class="box3">
+      <p>
+        skewY(20deg)<br>
+        y축 왜곡
+      </p>
+    </div>
+  </div>
+  <!-- clip-path는 transform: skew를 overflow:hidden한 것과 
+  모양이 비슷하지만, 안에 있는 내용도 모두 뒤틀림 -->
+  <h2>clip-path</h2>
+  <p>안의 내용은 변형되지 않지만 잘릴 수 있음</p>
+  <div id="clip">
+    <div class="box1">
+      <p>
+        polygon(-20% -20%, 80% 20%, 120% 120%, 20% 80%)
+      </p>
+    </div>
+    <div class="box2">
+      <p>
+        polygon(-20% 0%, 80% 0%, 120% 100%, 20% 100%)
+      </p>
+    </div>
+    <div class="box3">
+      <p>
+        polygon(0 -20%, 100% 20%, 100% 120%, 0% 80%)
+      </p>
+    </div>
+  </div>
+<h2>3D transform</h2>
+  <div id="rotate_3D">
+    <div class="box1">
+      <p>
+
+      </p>
+    </div>
+    <div class="box2">
+      <p>
+
+      </p>
+    </div>
+    <div class="box3">
+      <p>
+
+      </p>
+    </div>
+  </div>
+  <div id="translate_z">
+    <div class="box01">
+      <p>
+        box01
+      </p>
+    </div>
+    <div class="box02">
+      <p>
+        box02
+      </p>
+    </div>
+    <div class="box03">
+      <p>
+        box03
+      </p>
+    </div>
+  </div>
+
+  <style>
+#translate_z {
+  width: 800px;
+  margin: 0 auto;
+  border:  1px solid #000;
+  height: 600px;
+  position: relative;
+  perspective: 1600px;
+
+}
+#translate_z .box01, .box02, .box03 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+#translate_z p {
+  background-color: rgba(0, 0, 0, 0);
+  color: #000;
+  display: block;
+  text-align: start;
+padding: 10%;
+}
+    #translate_z .box01 {
+      transform: translateZ(-500px);
+    }
+    #translate_z .box02 {
+      transform: translateZ(0px);
+    }
+    #translate_z .box03 {
+      transform: translateZ(500px);
+    }
+
+    body {
+      background-color: #ccc;
+    }
+    #scale,#rotate,#skew,#translate,#clip,#rotate_3D {
+      display: flex;
+      margin: 50px 0;
+      justify-content: space-around;
+
+    }
+    .box1,.box2,.box3 {
+      width: 200px;
+      height: 200px;
+      border: solid 1px #000;
+    }
+    p {
+      background-color: rgba(0, 0, 0, 0.6);
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      color: #fff;
+      text-align: center;
+    }
+    h2 {
+      text-align: center;
+    }
+
+    #scale .box1 p {
+      transform: scale(1.2);
+    }
+    #scale .box2 p {
+      transform: scaleX(1.5);
+    }
+    #scale .box3 p {
+      transform: scaleY(0.5);
+    }
+
+    #rotate .box1 p {
+      transform: rotate(30deg);
+    }
+    #rotate .box2 p {
+      transform: rotate(-45deg);
+    }
+    #rotate .box3 p {
+      transform: rotate(30deg);
+      transform-origin: right top;
+    }
+
+    #translate .box1 p {
+      transform: translate(100px,100px);
+    }
+    #translate .box2 p {
+      transform: translateX(50%);
+    }
+    #translate .box3 p {
+      transform: translateY(100px);
+    }
+
+    #skew .box1 p {
+      transform: skew(20deg,20deg);
+    }
+    #skew .box2 p {
+      transform: skewX(20deg);
+    }
+    #skew .box3 p {
+      transform: skewY(20deg);
+    }
+
+    #clip .box1 p {
+      clip-path: polygon(-20% -20%, 80% 20%, 120% 120%, 20% 80%);
+    }
+    #clip .box2 p {
+      clip-path: polygon(-20% 0%, 80% 0%, 120% 100%, 20% 100%);
+    }
+    #clip .box3 p {
+      clip-path: polygon(0 -20%, 100% 20%, 100% 120%, 0% 80%);
+    }
+
+    #rotate_3D .box1, .box2, .box3 {
+      perspective: 150px;
+    }
+    #rotate_3D .box1 p {
+      transform: rotateY(50deg);
+      transition: 1s;
+    }
+    #rotate_3D .box2 p {
+      transform: rotateX(50deg);
+    }
+    #rotate_3D .box3 p {
+      transform: rotateY(0deg);
+      transform-origin: left top;
+      transition: 0.5s;
+      transition-timing-function: ease-in-out;
+
+    }
+    #rotate_3D .box1:hover p {
+      transform: rotateY(-310deg);
+    }
+    #rotate_3D .box3:hover p {
+      transform: rotateY(124deg);
+    }
+  </style>
