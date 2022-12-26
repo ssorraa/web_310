@@ -87,7 +87,7 @@
   </div>
   <script>
     let rabc = document.getElementById('abc')
-    ,ko, ma, en, ad, av;
+    , ko, ma, en, ad, av;
 
     function korset() {
       ko = Number(prompt('국어점수는?'));
@@ -120,7 +120,7 @@
       if (isNaN(ko && ma && en) == false) {
         ad = ko + ma + en;
         document.getElementById('add').innerHTML = ad;
-        av = Math.floor(ad / 3);
+        av = Math.trunc(ad / 3);
         document.getElementById('avg').innerHTML = av;
         if (av >= 90) {
           rabc.innerHTML = ('A학점');
