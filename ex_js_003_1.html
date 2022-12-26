@@ -8,7 +8,7 @@
   <title>조건문예제</title>
 </head>
 <style>
-body{
+  body {
     background-image: linear-gradient(to left, #eeeeee 50%, #ffffff 50%);
     background-size: 20px 100%;
     font-family: 'Do Hyeon', sans-serif;
@@ -77,33 +77,24 @@ body{
       <li>평균</li>
     </ul>
     <ul class="write">
-      <li id="kor" onclick="korset()"></li>
-      <li id="math" onclick="mathset()"></li>
-      <li id="eng" onclick="engset()"></li>
-      <li id="add"></li>
-      <li id="avg"></li>
+      <li id="kor" onclick="korset()">00</li>
+      <li id="math" onclick="mathset()">00</li>
+      <li id="eng" onclick="engset()">00</li>
+      <li id="add">00</li>
+      <li id="avg">00</li>
     </ul>
     <span id="abc"></span>
   </div>
   <script>
-    let rkor = document.getElementById('kor')
-    let rmath = document.getElementById('math')
-    let reng = document.getElementById('eng')
-    let radd = document.getElementById('add')
-    let ravg = document.getElementById('avg')
     let rabc = document.getElementById('abc')
-    let ko;
-    let ma;
-    let en;
-    let ad;
-    let av;
+    ,ko, ma, en, ad, av;
 
     function korset() {
       ko = Number(prompt('국어점수는?'));
       while (isNaN(ko) == true) {
         ko = Number(prompt('국어 점수를 숫자로 적어주세요'));
       }
-      rkor.innerHTML = ko;
+      document.getElementById('kor').innerHTML = ko;
       add();
     }
 
@@ -112,7 +103,7 @@ body{
       while (isNaN(ma) == true) {
         ma = Number(prompt('수학 점수를 숫자로 적어주세요'));
       }
-      rmath.innerHTML = ma;
+      document.getElementById('math').innerHTML = ma;
       add();
     }
 
@@ -121,17 +112,17 @@ body{
       while (isNaN(en) == true) {
         en = Number(prompt('국어 점수를 숫자로 적어주세요'));
       }
-      reng.innerHTML = en;
+      document.getElementById('eng').innerHTML = en;
       add();
     }
 
     function add() {
-      if (isNaN(ko) == false && isNaN(ma) == false && isNaN(en) == false) {
-        ad = Number(ko + ma + en);
-        radd.innerHTML = ad;
-        av = Number(Math.floor(ad / 3));
-        ravg.innerHTML = av;
-        if(av >= 90){
+      if (isNaN(ko && ma && en) == false) {
+        ad = ko + ma + en;
+        document.getElementById('add').innerHTML = ad;
+        av = Math.floor(ad / 3);
+        document.getElementById('avg').innerHTML = av;
+        if (av >= 90) {
           rabc.innerHTML = ('A학점');
         } else if (av < 90 && av >= 80) {
           rabc.innerHTML = ('B학점');
