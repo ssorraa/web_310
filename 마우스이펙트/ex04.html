@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Effect Script</title>
+    <style>
+        @font-face {
+            font-family: 'NEXONLv1Gothic';
+            font-weight: 300;
+            font-style: normal;
+            src: url(https://cdn.jsdelivr.net/gh/webfontworld/NEXONGothic/NEXONLv1GothicLowOTFLight.woff) format('woff');
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'NEXONLv1Gothic';
+            font-weight: 400;
+            font-style: normal;
+            src: url(https://cdn.jsdelivr.net/gh/webfontworld/NEXONGothic/NEXONLv1GothicOTF.woff) format('woff');
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'NEXONLv1Gothic';
+            font-weight: 700;
+            font-style: normal;
+            src: url(https://cdn.jsdelivr.net/gh/webfontworld/NEXONGothic/NEXONLv1GothicOTFBold.woff) format('woff');
+            font-display: swap;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* mouse */
+        .mouse {
+            background: #222;
+            color: #fff;
+            font-family: 'NEXONLv1Gothic';
+            font-weight: 400;
+            /* cursor: none; */
+        }
+
+        .bg {
+            position: relative;
+            height: 100vh;
+            background-image: url(../assets/img/bg12@2.jpg);
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+        .bg::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(52, 5, 70, 0.8);
+            z-index: -1;
+        }
+
+        /* info */
+        .info {
+            color: #fff;
+            font-family: "NEXONLv1Gothic";
+            padding: 20px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .info.right {
+            left: auto;
+            right: 0px;
+            top: 0px;
+        }
+
+        .info h1 {
+            font-weight: 300;
+            font-size: 20px;
+            line-height: 1.6;
+            border-bottom: 1px dashed #fff;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .info h1 a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 400;
+        }
+
+        .info p {
+            font-weight: 300;
+            font-size: 16px;
+        }
+
+        .info li {
+            list-style: none;
+            display: inline;
+        }
+
+        .info li a {
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+            border: 1px dashed #fff;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            line-height: 21px;
+            text-align: center;
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+
+        .info li.active a {
+            background: #fff;
+            color: #000;
+        }
+
+        .info.left {
+            top: auto;
+            right: 0px;
+            bottom: 0px;
+            width: 200px;
+        }
+
+        .info.left li {
+            display: block;
+            font-size: 14px;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        /* mouseCont */
+        .moveImage {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%) perspective(600px) rotateX(0deg) rotateY(0deg);
+            transform-style: preserve-3d;
+            will-change: transform;
+            /*willchange 는 최적화를 이루어져라, 라는 명령어로 한번만 쓰지는 않지만 
+            많은 속성에는 사용하지 않는다. */
+        }
+
+        .moveImage .mImg img {
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        .moveImage .mImg {
+            position: relative;
+            width: 50vw;
+        }
+
+        /* .moveImage .mImg::before {
+            content: '';
+            position: absolute; 
+            z-index: -1;
+            left: 5%; bottom: -20px;
+            width: 90%; height: 40px;
+            background: url(../assets/img/bg12.jpg) no-repeat;
+            background-size: 100% 40px;
+            filter: blur(15px);
+            opacity: 0.9;
+        } */
+        .moveImage .mText {
+            font-size: 1vw;
+            position: absolute;
+            left: 50%;
+            bottom: 50%;
+            transform: translate3d(-50%, 68%, 150px);
+            /*tx,ty,tz*/
+            background: rgba(0, 0, 0, 0.3);
+            padding: 2vw;
+            text-align: center;
+            border-radius: 2px;
+            white-space: nowrap;
+        }
+
+        .cursor {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #fff;
+            border-radius: 50%;
+            z-index: 1000;
+            user-select: none;
+            pointer-events: none;
+            transform: scale(1);
+            mix-blend-mode: difference;
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
+
+</head>
+
+<body class="mouse bg">
+
+    <!-- main -->
+    <main>
+        <div class="cursor"></div>
+
+        <article class="mouseCont">
+            <div class="moveImage">
+                <div class="mImg">
+                    <img src="bg12.jpg" alt="이미지">
+                </div>
+                <div class="mText">
+                    <p>Luck is when preparedness meets opportunity.</p>
+                    <p>운이란 준비가 기회를 만나는 것이다.</p>
+                </div>
+            </div>
+        </article>
+    </main>
+    <!-- //main -->
+
+    <!-- info -->
+    <div class="info">
+
+        <p>마우스 이펙트 - 이미지 효과2</p>
+    </div>
+
+
+    <div class="info left">
+        <ul>
+            <li>pageX : <span class="pageX">0</span></li>
+            <li>pageY : <span class="pageY">0</span></li>
+            <li>standardX : <span class="standardX">0</span></li>
+            <li>standardY : <span class="standardY">0</span></li>
+        </ul>
+    </div>
+    <!-- //info -->
+
+    <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+
+
+            // 내용출력하기 
+
+            $(window).mousemove(function (e) {
+
+               
+
+
+
+                let x = e.pageX,
+                    y = e.pageY,
+
+                    standx = $(window).width() / 2 - x,
+                    standy = $(window).height() / 2 - y,
+
+                // 최대값 , 최솟값 설정 
+                maxX=Math.max(-50,Math.min(50,standx)),
+                maxY=Math.max(-50,Math.min(50,standy)),
+
+                angleX = maxX*0.12,
+                angleY = maxY*0.12,
+
+
+                // 부드럽게 설정
+                softX =0,
+                softY =0;
+
+                softX += (angleX-softX)*0.1;
+                softY += (angleY-softY)*0.1;
+                
+
+
+                $('.pageX').text(x);
+                $('.pageY').text(y);
+                $('.standardX').text(standx);
+                $('.standardY').text(standy);
+
+
+
+
+
+                // 움직일 개체를 선택한다. 
+                $('.moveImage').css({ 'transform': 'translate(-50%, -50%) perspective(600px) rotateX('+softX+'deg) rotateY('+softY+'deg)'})
+
+
+
+
+
+            })
+        })
+    </script>
+
+
+</body>
+
+</html>

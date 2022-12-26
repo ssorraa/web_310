@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Effect Script</title>
+    <style>
+        @font-face {
+            font-family: 'NEXONLv1Gothic';
+            font-weight: 300; 
+            font-style: normal; 
+            src: url(https://cdn.jsdelivr.net/gh/webfontworld/NEXONGothic/NEXONLv1GothicLowOTFLight.woff) format('woff');
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'NEXONLv1Gothic';
+            font-weight: 400; 
+            font-style: normal; 
+            src: url(https://cdn.jsdelivr.net/gh/webfontworld/NEXONGothic/NEXONLv1GothicOTF.woff) format('woff');
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'NEXONLv1Gothic';
+            font-weight: 700; 
+            font-style: normal; 
+            src: url(https://cdn.jsdelivr.net/gh/webfontworld/NEXONGothic/NEXONLv1GothicOTFBold.woff) format('woff');
+            font-display: swap;
+        }
+        * {
+            margin: 0; padding: 0;
+        }
+    
+        /* mouse */
+        .mouse {
+            background: #222;
+            color: #fff;
+            font-family: 'NEXONLv1Gothic';
+            font-weight: 400;
+        }
+        .bg {
+            position: relative;
+            height: 100vh;
+            background-image: url(../assets/img/bg5@2.jpg);
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+        .bg::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(52, 5, 70, 0.7);
+            z-index: -1;
+        }
+    
+        /* info */
+        .info {
+            color: #fff;
+            font-family: "NEXONLv1Gothic";
+            padding: 20px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .info.right {
+            left: auto;
+            right: 0px;
+            top: 0px;
+        }
+        .info h1 {
+            font-weight: 300;
+            font-size: 20px;
+            line-height: 1.6;
+            border-bottom: 1px dashed #fff;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        .info h1 a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 400;
+        }
+        .info p {
+            font-weight: 300;
+            font-size: 16px;
+        }
+        .info li {
+            list-style: none;
+            display: inline;
+        }
+        .info li a {
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+            border: 1px dashed #fff;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            line-height: 21px;
+            text-align: center;
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+        .info li.active a {
+            background: #fff;
+            color: #000;
+        }
+        .info.left {
+            top: auto;
+            right: 0px;
+            bottom: 0px;
+            width: 200px;
+        }
+        .info.left li {
+            display: block;
+            font-size: 14px;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+    
+        /* mouseCont */
+        .mouseCont {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%; height: 100vh;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .moveImage {
+            position: relative;
+            cursor: none;
+        }
+        .moveImage .mImg {
+            width: 50vw;
+            height: 60vh;
+            background: #ccc;
+            position: relative;
+            overflow: hidden;
+            transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
+        }
+        .moveImage:hover .mImg {
+            transform: scale(1.025);
+        }
+        .moveImage .mImg img {
+            position: absolute;
+            left: -5%; top: -5%;
+            width: 110%;
+            height: 110%;
+            object-fit: cover;
+            transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
+        }
+        .moveImage:hover .mImg img {
+            filter: grayscale(0%)
+        }
+        .moveImage .mText {
+            position: absolute;
+            left: 50%; top: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-size: 1.3vw;
+            line-height: 1.6;
+            white-space: nowrap;
+        }
+        .cursor {
+            position: absolute;
+            width: 20px; height: 20px;
+            background: #fff;
+            border-radius: 50%;
+            z-index: 1000;
+            user-select: none;
+            pointer-events: none;
+        }
+    </style>
+    
+</head>
+<body class="mouse bg">
+
+    <!-- main -->
+    <main>
+        <div class="cursor"></div>
+
+        <article class="mouseCont">
+            <div class="moveImage">
+                <div class="mImg">
+                    <img src="bg19.jpg" alt="이미지">
+                </div>
+                <div class="mText">
+                    <p>I never dreamed about success, I worked for it.</p>
+                    <p>나는 결코 성공에 대해 꿈꾸지 않았다, 나는 꿈을 위해 행동했다.</p>
+                </div>
+            </div>
+        </article>
+    </main>
+    <!-- //main -->
+
+    <!-- info -->
+    <div class="info">
+       
+        <p>마우스 이펙트 - 이미지 효과</p>
+    </div>
+
+
+    <div class="info left">
+        <ul>
+            <li>pageX : <span class="pageX">0</span></li>
+            <li>pageY : <span class="pageY">0</span></li>
+            <li>standardX : <span class="standardX">0</span></li>
+            <li>standardY : <span class="standardY">0</span></li>
+        </ul>
+    </div>
+    <!-- //info -->
+
+    <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script>
+        $(".moveImage").mousemove(function(e){
+            gsap.to(".cursor", {duration: .2, left: e.pageX -10, top: e.pageY -10})
+            
+            let pageX = e.pageX;
+            let pageY = e.pageY;
+
+            let standardX = $(window).width()/2 - pageX;
+            let standardY = $(window).height()/2 - pageY;
+
+            $(".mImg img").attr({"style" : "transform : translate(" + standardX/20 + "px," + standardY/20 +"px)" });
+
+            //출력
+            $(".pageX").text(pageX + "px");
+            $(".pageY").text(pageY + "px");
+            $(".standardX").text(standardX + "px");
+            $(".standardY").text(standardY + "px");
+        });
+    </script>
+</body>
+</html>
