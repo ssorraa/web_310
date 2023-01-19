@@ -13,7 +13,7 @@
 
 transform 학습
   <h2>transform</h2>
-  <p>안의 내용까지 모두 변형됨</p>
+  <p>적용하면 안의 내용까지 모두 변형됨</p>
   <div id="scale">
     <div class="box1">
       <p>
@@ -101,7 +101,7 @@ transform 학습
   <!-- clip-path는 transform: skew를 overflow:hidden한 것과 
   모양이 비슷하지만, 안에 있는 내용은 안 뒤틀림 -->
   <h2>clip-path</h2>
-  <p>안의 내용은 변형되지 않지만 잘릴 수 있음<br>
+  <p>안의 내용은 변형되지 않지만 내용이 밖으로 삐져나오지 않아서 잘릴 수 있음<br>
     polygon(a b, a b, a b, a b) a: left, b: top<br>
     처음 시작은 좌측 상단부터 시계방향
   </p>
@@ -123,82 +123,55 @@ transform 학습
     </div>
   </div>
 <h2>3D transform</h2>
+<p>perspective 값을 줘서 깊이감을 준 뒤에 3차원적으로 움직일 수 있게 만듦</p>
   <div id="rotate_3D">
     <div class="box1">
       <p>
-
+        rotateY(50deg)<br>
+        ->(-310deg)
       </p>
     </div>
     <div class="box2">
       <p>
-
+        rotateX(50deg)
       </p>
     </div>
     <div class="box3">
       <p>
-
+        rotateY(0deg)<br>
+        ->(124deg)
       </p>
     </div>
   </div>
   <div id="translate_z">
     <div class="box01">
       <p>
-        box01
+        box01<br>
+        translateZ(-500px)
       </p>
     </div>
     <div class="box02">
       <p>
-        box02
+        box02<br>
+        translateZ(0px)
       </p>
     </div>
     <div class="box03">
       <p>
-        box03
+        box03<br>
+        translateZ(500px)
       </p>
     </div>
   </div>
 
   <style>
-#translate_z {
-  width: 800px;
-  margin: 200px auto;
-  border:  1px solid #000;
-  height: 600px;
-  position: relative;
-  perspective: 1600px;
 
-}
-#translate_z .box01, .box02, .box03 {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.5);
-}
-#translate_z p {
-  background-color: rgba(0, 0, 0, 0);
-  color: #000;
-  display: block;
-  text-align: start;
-  padding: 10%;
-}
-    #translate_z .box01 {
-      transform: translateZ(-500px);
-    }
-    #translate_z .box02 {
-      transform: translateZ(0px);
-    }
-    #translate_z .box03 {
-      transform: translateZ(500px);
-    }
-
-    body {
-      background-color: #ccc;
-    }
-    #scale,#rotate,#skew,#translate,#clip,#rotate_3D {
+  body {
+    background-color: #ccc;
+  }
+  #scale,#rotate,#skew,#translate,#clip,#rotate_3D {
       display: flex;
-      margin: 50px 0;
+      margin: 100px 0;
       justify-content: space-around;
 
     }
@@ -295,5 +268,39 @@ transform 학습
     }
     #rotate_3D .box3:hover p {
       transform: rotateY(124deg);
+    }
+
+#translate_z {
+  width: 800px;
+  margin: 200px auto;
+  border:  1px solid #000;
+  height: 600px;
+  position: relative;
+  perspective: 1600px;
+
+}
+#translate_z .box01, .box02, .box03 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+#translate_z p {
+  background-color: rgba(0, 0, 0, 0);
+  color: #000;
+  display: block;
+  text-align: start;
+  padding: 10%;
+}
+    #translate_z .box01 {
+      transform: translateZ(-500px);
+    }
+    #translate_z .box02 {
+      transform: translateZ(0px);
+    }
+    #translate_z .box03 {
+      transform: translateZ(500px);
     }
   </style>
