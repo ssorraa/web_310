@@ -99,9 +99,12 @@ transform 학습
     </div>
   </div>
   <!-- clip-path는 transform: skew를 overflow:hidden한 것과 
-  모양이 비슷하지만, 안에 있는 내용도 모두 뒤틀림 -->
+  모양이 비슷하지만, 안에 있는 내용은 안 뒤틀림 -->
   <h2>clip-path</h2>
-  <p>안의 내용은 변형되지 않지만 잘릴 수 있음</p>
+  <p>안의 내용은 변형되지 않지만 잘릴 수 있음<br>
+    polygon(a b, a b, a b, a b) a: left, b: top<br>
+    처음 시작은 좌측 상단부터 시계방향
+  </p>
   <div id="clip">
     <div class="box1">
       <p>
@@ -158,7 +161,7 @@ transform 학습
   <style>
 #translate_z {
   width: 800px;
-  margin: 0 auto;
+  margin: 200px auto;
   border:  1px solid #000;
   height: 600px;
   position: relative;
@@ -178,7 +181,7 @@ transform 학습
   color: #000;
   display: block;
   text-align: start;
-padding: 10%;
+  padding: 10%;
 }
     #translate_z .box01 {
       transform: translateZ(-500px);
@@ -260,7 +263,6 @@ padding: 10%;
     #skew .box3 p {
       transform: skewY(20deg);
     }
-
     #clip .box1 p {
       clip-path: polygon(-20% -20%, 80% 20%, 120% 120%, 20% 80%);
     }
